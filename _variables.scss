@@ -1,0 +1,47 @@
+//FONTS
+@font-face {
+  font-family: "UniformProCon-Blk";
+  src: url("/assets/fonts/uniform-pro-con-black.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "UniformProCon-Med";
+  src: url("/assets/fonts/uniform-pro-con-medium.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Shapiro-Bold";
+  src: url("/assets/fonts/sharpiro-bold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Shapiro-Regular";
+  src: url("/assets/fonts/sharpiro-regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+$uniformBlack: "UniformProCon-Blk";
+$uniformMedium: "UniformProCon-Med";
+$shapiroBold: "Shapiro-Bold";
+$shapiroRegular: "Shapiro-Regular";
+
+//COLORS
+$modalBG: #2b2e4b;
+$placeholderColor: #25243a;
+//orange
+$orange: #f48d69;
+$orangeLight: #ffb591;
+$orangePastel: #f8ddce;
+
+//green
+$green: #5be080;
+$greenLight: #b9f8b9;
+$greenPastel: #dffcdf;
+
+//blue
+$blue: #3e14d6;
+$blueLight: #6259fa;
+$bluePastel: #cacefc;

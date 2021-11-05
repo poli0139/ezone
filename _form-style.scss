@@ -1,0 +1,84 @@
+@use "variables";
+//MODAL STYLING
+.modal {
+  background-color: variables.$modalBG;
+  width: 60%;
+  height: auto;
+  text-align: center;
+  color: white;
+  padding: 3rem;
+  border-radius: 40px;
+  position: fixed;
+  top: 12%;
+  left: 17%;
+  h1 {
+    font-family: variables.$uniformBlack;
+    font-size: 4rem;
+    // border: solid red 1px;
+    width: fit-content;
+    margin: auto;
+    line-height: 1;
+    letter-spacing: 0.5rem;
+    color: variables.$orangeLight;
+    text-transform: uppercase;
+  }
+  p {
+    width: 60%;
+    // border: solid white 1px;
+    margin: 5rem auto 0 auto;
+    line-height: 1.5;
+    font-family: variables.$uniformMedium;
+  }
+
+  .orangeSpan {
+    color: variables.$orangeLight;
+  }
+  .greenSpan {
+    color: variables.$greenLight;
+  }
+  form {
+    margin: 3rem auto;
+  }
+}
+.firstStepSec {
+  border: solid variables.$orangeLight 5px;
+  height: 100%;
+}
+
+//INPUT STYLE
+.inputDiv {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+  font-family: variables.$uniformBlack;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-align: left;
+  row-gap: 1rem;
+}
+input[type="text"] {
+  background: none;
+  border: none;
+  border-bottom: solid variables.$orangeLight 2px;
+  font-family: variables.$uniformBlack;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+::placeholder {
+  color: variables.$placeholderColor;
+}
+
+//BUTTON
+
+.join {
+  font-family: variables.$uniformMedium;
+  background: none;
+  color: white;
+  border: solid variables.$orangeLight 2px;
+  border-radius: 80px;
+  box-shadow: none;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+}
