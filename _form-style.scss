@@ -8,12 +8,14 @@
   color: white;
   padding: 3rem;
   border-radius: 40px;
-  position: fixed;
   top: 12%;
   left: 17%;
+  //position: fixed;
+
+  //font styles
   h1 {
     font-family: variables.$uniformBlack;
-    font-size: 4rem;
+    font-size: variables.$h1-size;
     // border: solid red 1px;
     width: fit-content;
     margin: auto;
@@ -22,12 +24,48 @@
     color: variables.$orangeLight;
     text-transform: uppercase;
   }
+
+  h2 {
+    font-family: variables.$uniformBlack;
+    font-size: variables.$h2-size;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+  }
+
+  h3 {
+    font-family: variables.$uniformMedium;
+    font-size: variables.$h3-size;
+    text-transform: uppercase;
+    line-height: 1.5;
+    letter-spacing: 0.1rem;
+    font-weight: lighter;
+  }
+
+  h4 {
+    font-family: variables.$uniformMedium;
+    font-size: variables.$h4-size;
+    text-transform: uppercase;
+    line-height: 1.5;
+    letter-spacing: 0.1rem;
+    font-weight: lighter;
+  }
+
+  h5 {
+    font-family: variables.$uniformMedium;
+    font-size: variables.$h5-size;
+    text-transform: uppercase;
+    line-height: 1.5;
+    letter-spacing: 0.1rem;
+    font-weight: lighter;
+  }
+
   p {
     width: 60%;
     // border: solid white 1px;
     margin: 5rem auto 0 auto;
     line-height: 1.5;
     font-family: variables.$uniformMedium;
+    font-size: variables.$p-size;
   }
 
   .orangeSpan {
@@ -43,6 +81,19 @@
 .firstStepSec {
   border: solid variables.$orangeLight 5px;
   height: 100%;
+}
+
+//LABEL STYLE
+.textLabel {
+  font-size: variables.$label-text;
+}
+
+.checkboxLabel {
+  font-family: variables.$uniformMedium;
+  font-size: variables.$label-checkbox;
+  text-transform: none;
+  font-weight: lighter;
+  letter-spacing: 0.1rem;
 }
 
 //INPUT STYLE
@@ -67,18 +118,37 @@ input[type="text"] {
 }
 ::placeholder {
   color: variables.$placeholderColor;
+  font-size: variables.$placeholder-size;
 }
 
 //BUTTON
 
 .join {
+  font-family: variables.$uniformBlack;
+  background: none;
+  color: white;
+  border: solid variables.$orangeLight 3px;
+  border-radius: 80px;
+  box-shadow: none;
+  font-size: variables.$button1-text;
+  font-weight: lighter;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+}
+
+.continue {
   font-family: variables.$uniformMedium;
   background: none;
   color: white;
   border: solid variables.$orangeLight 2px;
   border-radius: 80px;
   box-shadow: none;
-  font-size: 2rem;
+  font-size: variables.$button2-text;
+  font-weight: lighter;
+  text-transform: uppercase;
+  letter-spacing: 3px;
   padding: 1rem 2rem;
   margin-top: 2rem;
 }
