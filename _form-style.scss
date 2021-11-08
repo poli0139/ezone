@@ -31,6 +31,10 @@
     letter-spacing: 0.3rem;
   }
 
+  .thirdStep h2 {
+    color: variables.$orangeLight;
+  }
+
   h3 {
     font-family: variables.$uniformMedium;
     font-size: variables.$h3-size;
@@ -110,6 +114,10 @@
 
   .secondStep {
     left: 65rem;
+  }
+
+  .thirdStep div.checkboxes {
+    margin-top: 2rem;
   }
 }
 

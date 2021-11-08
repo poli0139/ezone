@@ -9,5 +9,18 @@
   "devDependencies": {
     "sass": "^1.43.4",
     "vite": "^2.6.4"
-  }
+  },
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poli0139/ezone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/poli0139/ezone/issues"
+  },
+  "homepage": "https://github.com/poli0139/ezone#readme",
+  "description": ""
 }
