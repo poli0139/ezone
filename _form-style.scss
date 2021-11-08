@@ -95,7 +95,6 @@
   height: 75vh;
   display: flex;
   justify-content: center;
-  display: none;
 
   form {
     width: 90%;
@@ -129,6 +128,11 @@
   height: auto;
   align-items: center;
   text-align: left;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 15px;
+  transition: all 0.3s;
 }
 
 //grid for checkboxes
@@ -145,7 +149,7 @@
   flex-direction: column;
   width: 100%;
   margin: auto;
-  font-family: variables.$uniformBlack;
+  font-family: variables.$uniformMedium;
   text-transform: uppercase;
   letter-spacing: 5px;
   text-align: left;
@@ -154,19 +158,30 @@
 input[type="checkbox"] {
   align-self: center;
   margin-right: 0.2rem;
+  appearance: none;
+  border: solid #54536d 1px;
+  border-radius: 5px;
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
 input[type="text"] {
   background: none;
   border: none;
   border-bottom: solid variables.$orangeLight 2px;
-  font-family: variables.$uniformBlack;
+  font-family: variables.$uniformMedium;
+  font-size: variables.$placeholder-size;
   text-transform: uppercase;
   letter-spacing: 3px;
+  color: white;
 }
 ::placeholder {
+  padding-left: 0.2rem;
   color: variables.$placeholderColor;
   font-size: variables.$placeholder-size;
+  transition: all 0.4s;
 }
 
 //BUTTON
