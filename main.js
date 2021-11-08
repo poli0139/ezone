@@ -5,6 +5,7 @@
 //   <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
 // `
 
+//SWIPPING OF STEPS
 const firstStep = document.querySelector(".firstStep");
 const secondStep = document.querySelector(".secondStep");
 
@@ -22,3 +23,5 @@ back2.onclick = function () {
   firstStep.style.left = "2.8rem";
   secondStep.style.left = "65rem";
 };
+
+//PASSWORD TOGGLE
