@@ -308,6 +308,15 @@
   justify-content: space-evenly;
   font-family: variables.$uniformMedium;
   font-size: variables.$h2-size;
+
+  #number {
+    width: 75px;
+    height: 75px;
+    line-height: 5rem;
+    border-radius: 50%;
+    border: 2px solid variables.$orangeLight;
+    margin-bottom: 1rem;
+  }
 }
 
 //BUTTON
