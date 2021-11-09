@@ -5,6 +5,7 @@
 //   <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
 // `
 
+//SWIPPING OF STEPS
 const firstStep = document.querySelector(".firstStep");
 const secondStep = document.querySelector(".secondStep");
 const thirdStep = document.querySelector(".thirdStep");
@@ -25,3 +26,31 @@ back2.onclick = function () {
   firstStep.style.left = "2.8rem";
   secondStep.style.left = "65rem";
 };
+
+//PASSWORD TOGGLE
+document.querySelector("#eye").addEventListener("click", togglePW);
+document.querySelector("#eye2").addEventListener("click", togglePW2);
+
+function togglePW() {
+  const password = document.querySelector("[name=password]");
+
+  if (password.getAttribute("type") === "password") {
+    password.setAttribute("type", "text");
+    document.getElementById("eye").style.color = "white";
+  } else {
+    password.setAttribute("type", "password");
+    document.getElementById("eye").style.color = "#6a678b";
+  }
+}
+
+function togglePW2() {
+  const repeatPassword = document.querySelector("[name=repeatPassword]");
+
+  if (repeatPassword.getAttribute("type") === "password") {
+    repeatPassword.setAttribute("type", "text");
+    document.getElementById("eye2").style.color = "white";
+  } else {
+    repeatPassword.setAttribute("type", "password");
+    document.getElementById("eye2").style.color = "#6a678b";
+  }
+}
