@@ -6,12 +6,14 @@
 // `
 
 //SWIPPING OF STEPS
+const intro = document.querySelector(".introSec");
 const firstStep = document.querySelector(".firstStep");
 const secondStep = document.querySelector(".secondStep");
 const thirdStep = document.querySelector(".thirdStep");
 const fourthStep = document.querySelector(".fourthStep");
 const confirmation = document.querySelector(".confirmationDiv");
 
+const join = document.querySelector("#join");
 const back1 = document.querySelector("#back1");
 const continue1 = document.querySelector("#continue1");
 const back2 = document.querySelector("#back2");
@@ -22,7 +24,18 @@ const back4 = document.querySelector("#back4");
 const continue4 = document.querySelector("#continue4");
 const back5 = document.querySelector("#back5");
 
+//INTRO
+join.onclick = function () {
+  intro.style.left = "-65rem";
+  firstStep.style.left = "2.8rem";
+};
+
 //STEP 1
+back1.onclick = function () {
+  intro.style.left = "2.8rem";
+  firstStep.style.left = "65rem";
+};
+
 continue1.onclick = function () {
   firstStep.style.left = "-65rem";
   secondStep.style.left = "2.8rem";
@@ -63,7 +76,8 @@ continue4.onclick = function () {
 
 //CONFIRMATION
 back5.onclick = function () {
-  firstStep.style.left = "2.8rem";
+  intro.style.left = "2.8rem";
+  firstStep.style.left = "65rem";
   confirmation.style.left = "65rem";
   secondStep.style.left = "65rem";
   thirdStep.style.left = "65rem";
