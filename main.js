@@ -20,6 +20,12 @@ const firstName = document.querySelector(
 const toImproveCheckbox = document.querySelectorAll(
   "form[name='firstStep'] input[name='toImprove']"
 );
+const gameTypeCheckbox = document.querySelectorAll(
+  "form[name='secondStep'] input[name='gameType']"
+);
+const gameCheckbox = document.querySelectorAll(
+  "form[name='thirdStep'] input[name='game']"
+);
 
 const join = document.querySelector("#join");
 const back1 = document.querySelector("#back1");
@@ -67,14 +73,16 @@ continue1.onclick = function () {
   // ).length;
   // console.log(selected);
   getCheckboxCount();
-  if (getCheckboxCount() <= 3) {
+  if (getCheckboxCount() == 0) {
+    document
+      .querySelector("form[name=firstStep] .err-message")
+      .classList.remove("hidden");
+  } else {
     firstStep.style.left = "-65rem";
     secondStep.style.left = "2.8rem";
     formSection.classList.remove("themeBlue");
     formSection.classList.remove("themeOrange");
     formSection.classList.add("themeGreen");
-  } else {
-    console.log(getCheckboxCount());
   }
 };
 
@@ -88,11 +96,18 @@ back2.onclick = function () {
 };
 
 continue2.onclick = function () {
-  secondStep.style.left = "-65rem";
-  thirdStep.style.left = "2.8rem";
-  formSection.classList.remove("themeGreen");
-  formSection.classList.remove("themeBlue");
-  formSection.classList.add("themeOrange");
+  getCheckboxCount();
+  if (getCheckboxCount() == 0) {
+    document
+      .querySelector("form[name=secondStep] .err-message")
+      .classList.remove("hidden");
+  } else {
+    secondStep.style.left = "-65rem";
+    thirdStep.style.left = "2.8rem";
+    formSection.classList.remove("themeGreen");
+    formSection.classList.remove("themeBlue");
+    formSection.classList.add("themeOrange");
+  }
 };
 
 //STEP 3
@@ -105,11 +120,18 @@ back3.onclick = function () {
 };
 
 continue3.onclick = function () {
-  thirdStep.style.left = "-65rem";
-  fourthStep.style.left = "2.8rem";
-  formSection.classList.remove("themeGreen");
-  formSection.classList.remove("themeOrange");
-  formSection.classList.add("themeBlue");
+  getCheckboxCount();
+  if (getCheckboxCount() == 0) {
+    document
+      .querySelector("form[name=thirdStep] .err-message")
+      .classList.remove("hidden");
+  } else {
+    thirdStep.style.left = "-65rem";
+    fourthStep.style.left = "2.8rem";
+    formSection.classList.remove("themeGreen");
+    formSection.classList.remove("themeOrange");
+    formSection.classList.add("themeBlue");
+  }
 };
 
 //STEP 4
@@ -175,27 +197,35 @@ function togglePW2() {
 function checkIfValid(input) {
   return input.checkValidity();
 }
-console.log(toImproveCheckbox);
 toImproveCheckbox.forEach((e) => {
   e.addEventListener("click", checkboxCounter);
 });
+gameTypeCheckbox.forEach((e) => {
+  e.addEventListener("click", checkboxCounter);
+});
+gameCheckbox.forEach((e) => {
+  e.addEventListener("click", checkboxCounter);
+});
 
-function checkboxCounter() {
+function checkboxCounter(e) {
+  document.querySelectorAll(".err-message").forEach((e) => {
+    e.classList.add("hidden");
+  });
   let currentlySelected = document.querySelectorAll(
-    "input[name=toImprove]:checked"
+    `input[name=${e.target.name}]:checked`
   ).length;
   console.log(currentlySelected);
   if (currentlySelected == 3) {
     console.log("too many");
     document
-      .querySelectorAll("input[name=toImprove]:not(:checked)")
+      .querySelectorAll(`input[name=${e.target.name}]:not(:checked)`)
       .forEach((e) => {
         e.setAttribute("disabled", true);
       });
   } else if (currentlySelected != 3) {
     console.log("else");
     document
-      .querySelectorAll("input[name=toImprove]:not(:checked)")
+      .querySelectorAll(`input[name=${e.target.name}]:not(:checked)`)
       .forEach((e) => {
         e.removeAttribute("disabled");
       });

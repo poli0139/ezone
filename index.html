@@ -70,6 +70,7 @@
               what areas do you need help improving?
             </h4>
             <h5>select up to 3</h5>
+            <h5 class="err-message hidden">Please, select at least 1</h5>
             <div class="checkboxes">
               <label for="hand/eye" class="checkboxLabel">
                 <input name="gameType" type="checkbox" id="hand/eye" />
@@ -160,65 +161,67 @@
             </div>
           </form>
 
-          <form action="" class="stepsForms secondStep">
+          <form name="secondStep" action="" class="stepsForms secondStep">
             <h2>we can definitely help you with those areas! now tell us...</h2>
             <h3>What kind of games do you like to play?</h3>
             <h5>select up to 3</h5>
+            <h5 class="err-message hidden">Please, select at least 1</h5>
+
             <div class="checkboxes">
               <label for="fps" class="checkboxLabel">
                 <input type="checkbox" id="fps" />
                 FPS
               </label>
               <label for="mmorpg" class="checkboxLabel">
-                <input type="checkbox" id="mmorpg" />
+                <input name="gameType" type="checkbox" id="mmorpg" />
                 MMORPG
               </label>
               <label for="sports" class="checkboxLabel">
-                <input type="checkbox" id="sports" />
+                <input name="gameType" type="checkbox" id="sports" />
                 Sports
               </label>
               <label for="racing" class="checkboxLabel">
-                <input type="checkbox" id="racing" />
+                <input name="gameType" type="checkbox" id="racing" />
                 Racing
               </label>
               <label for="towerDefense" class="checkboxLabel">
-                <input type="checkbox" id="towerDefense" />
+                <input name="gameType" type="checkbox" id="towerDefense" />
                 Tower defense
               </label>
               <label for="rts" class="checkboxLabel">
-                <input type="checkbox" id="rts" />
+                <input name="gameType" type="checkbox" id="rts" />
                 RTS
               </label>
               <label for="simulation" class="checkboxLabel">
-                <input type="checkbox" id="simulation" />
+                <input name="gameType" type="checkbox" id="simulation" />
                 Simulation
               </label>
               <label for="rolePlaying" class="checkboxLabel">
-                <input type="checkbox" id="rolePlaying" />
+                <input name="gameType" type="checkbox" id="rolePlaying" />
                 Role-playing
               </label>
               <label for="adventure" class="checkboxLabel">
-                <input type="checkbox" id="adventure" />
+                <input name="gameType" type="checkbox" id="adventure" />
                 Adventure
               </label>
               <label for="survival" class="checkboxLabel">
-                <input type="checkbox" id="survival" />
+                <input name="gameType" type="checkbox" id="survival" />
                 Survival
               </label>
               <label for="fighting" class="checkboxLabel">
-                <input type="checkbox" id="fighting" />
+                <input name="gameType" type="checkbox" id="fighting" />
                 Fighting
               </label>
               <label for="battleRoyale" class="checkboxLabel">
-                <input type="checkbox" id="battleRoyale" />
+                <input name="gameType" type="checkbox" id="battleRoyale" />
                 Battle royale
               </label>
               <label for="rythm" class="checkboxLabel">
-                <input type="checkbox" id="rythm" />
+                <input name="gameType" type="checkbox" id="rythm" />
                 Rythm
               </label>
               <label for="platform" class="checkboxLabel">
-                <input type="checkbox" id="platform" />
+                <input name="gameType" type="checkbox" id="platform" />
                 Platform
               </label>
             </div>
@@ -231,94 +234,95 @@
             </div>
           </form>
 
-          <form action="" class="stepsForms thirdStep">
+          <form name="thirdStep" action="" class="stepsForms thirdStep">
             <h2>Nice!</h2>
             <h2>Now for the hard part...</h2>
             <h3>Which are your favorite games?</h3>
             <h5>select up to 3</h5>
+            <h5 class="err-message hidden">Please, select at least 1</h5>
             <div class="checkboxes">
               <label for="csgo" class="checkboxLabel">
-                <input type="checkbox" id="csgo" />
+                <input name="game" type="checkbox" id="csgo" />
                 CS:GO
               </label>
               <label for="tekken" class="checkboxLabel">
-                <input type="checkbox" id="tekken" />
+                <input name="game" type="checkbox" id="tekken" />
                 Tekken
               </label>
               <label for="fifa" class="checkboxLabel">
-                <input type="checkbox" id="fifa" />
+                <input name="game" type="checkbox" id="fifa" />
                 Fifa
               </label>
               <label for="supermario" class="checkboxLabel">
-                <input type="checkbox" id="supermario" />
+                <input name="game" type="checkbox" id="supermario" />
                 Super Mario
               </label>
               <label for="fortnite" class="checkboxLabel">
-                <input type="checkbox" id="fortnite" />
+                <input name="game" type="checkbox" id="fortnite" />
                 Fortnite
               </label>
               <label for="cod" class="checkboxLabel">
-                <input type="checkbox" id="cod" />
+                <input name="game" type="checkbox" id="cod" />
                 Call of Duty
               </label>
               <label for="sims" class="checkboxLabel">
-                <input type="checkbox" id="sims" />
+                <input name="game" type="checkbox" id="sims" />
                 The Sims
               </label>
               <label for="mortalcombat" class="checkboxLabel">
-                <input type="checkbox" id="mortalcombat" />
+                <input name="game" type="checkbox" id="mortalcombat" />
                 Mortal Combat
               </label>
               <label for="guitarhero" class="checkboxLabel">
-                <input type="checkbox" id="guitarhero" />
+                <input name="game" type="checkbox" id="guitarhero" />
                 Guitar Hero
               </label>
               <label for="wow" class="checkboxLabel">
-                <input type="checkbox" id="wow" />
+                <input name="game" type="checkbox" id="wow" />
                 World of Warcraft
               </label>
               <label for="skyrim" class="checkboxLabel">
-                <input type="checkbox" id="skyrim" />
+                <input name="game" type="checkbox" id="skyrim" />
                 Skyrim
               </label>
               <label for="starcraft" class="checkboxLabel">
-                <input type="checkbox" id="starcraft" />
+                <input name="game" type="checkbox" id="starcraft" />
                 Star Craft
               </label>
               <label for="warcraft" class="checkboxLabel">
-                <input type="checkbox" id="warcraft" />
+                <input name="game" type="checkbox" id="warcraft" />
                 Warcraft
               </label>
               <label for="lol" class="checkboxLabel">
-                <input type="checkbox" id="lol" />
+                <input name="game" type="checkbox" id="lol" />
                 League of Legends
               </label>
               <label for="dota" class="checkboxLabel">
-                <input type="checkbox" id="dota" />
+                <input name="game" type="checkbox" id="dota" />
                 Dota
               </label>
               <label for="valorant" class="checkboxLabel">
-                <input type="checkbox" id="valorant" />
+                <input name="game" type="checkbox" id="valorant" />
                 Valorant
               </label>
               <label for="leftfordead" class="checkboxLabel">
-                <input type="checkbox" id="leftfordead" />
+                <input name="game" type="checkbox" id="leftfordead" />
                 Left for Dead
               </label>
               <label for="overwatch" class="checkboxLabel">
-                <input type="checkbox" id="overwatch" />
+                <input name="game" type="checkbox" id="overwatch" />
                 Overwatch
               </label>
               <label for="pubg" class="checkboxLabel">
-                <input type="checkbox" id="pubg" />
+                <input name="game" type="checkbox" id="pubg" />
                 PUBG
               </label>
               <label for="diablo" class="checkboxLabel">
-                <input type="checkbox" id="diablo" />
+                <input name="game" type="checkbox" id="diablo" />
                 Diablo
               </label>
               <label for="minecraft" class="checkboxLabel">
-                <input type="checkbox" id="minecraft" />
+                <input name="game" type="checkbox" id="minecraft" />
                 Minecraft
               </label>
             </div>
