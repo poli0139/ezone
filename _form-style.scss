@@ -245,6 +245,11 @@
     height: auto;
     align-items: center;
     text-align: left;
+    gap: 0.5rem;
+    cursor: pointer;
+    padding: 0.4rem;
+    border-radius: 15px;
+    transition: all 0.3s;
   }
 
   //grid for checkboxes
