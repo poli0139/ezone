@@ -14,8 +14,11 @@ const fourthStep = document.querySelector(".fourthStep");
 const confirmation = document.querySelector(".confirmationDiv");
 const formSection = document.querySelector(".formSteps");
 
-var firstName = document.querySelector(
+const firstName = document.querySelector(
   "form[name='info'] input[name='firstName']"
+);
+const toImproveCheckbox = document.querySelectorAll(
+  "form[name='firstStep'] input[name='toImprove']"
 );
 
 const join = document.querySelector("#join");
@@ -45,7 +48,7 @@ join.onclick = function () {
     formSection.classList.remove("themeOrange");
     formSection.classList.add("themeBlue");
   } else {
-    console.log(result);
+    document.querySelector("form[name='info'] p").classList.remove("hidden");
   }
 };
 
@@ -59,11 +62,20 @@ back1.onclick = function () {
 };
 
 continue1.onclick = function () {
-  firstStep.style.left = "-65rem";
-  secondStep.style.left = "2.8rem";
-  formSection.classList.remove("themeBlue");
-  formSection.classList.remove("themeOrange");
-  formSection.classList.add("themeGreen");
+  // let selected = document.querySelectorAll(
+  //   "input[name=toImptove]:checked"
+  // ).length;
+  // console.log(selected);
+  getCheckboxCount();
+  if (getCheckboxCount() <= 3) {
+    firstStep.style.left = "-65rem";
+    secondStep.style.left = "2.8rem";
+    formSection.classList.remove("themeBlue");
+    formSection.classList.remove("themeOrange");
+    formSection.classList.add("themeGreen");
+  } else {
+    console.log(getCheckboxCount());
+  }
 };
 
 //STEP 2
@@ -158,6 +170,38 @@ function togglePW2() {
   }
 }
 
+//VALIDATION FUNCTIONS
+
 function checkIfValid(input) {
   return input.checkValidity();
+}
+console.log(toImproveCheckbox);
+toImproveCheckbox.forEach((e) => {
+  e.addEventListener("click", checkboxCounter);
+});
+
+function checkboxCounter() {
+  let currentlySelected = document.querySelectorAll(
+    "input[name=toImprove]:checked"
+  ).length;
+  console.log(currentlySelected);
+  if (currentlySelected == 3) {
+    console.log("too many");
+    document
+      .querySelectorAll("input[name=toImprove]:not(:checked)")
+      .forEach((e) => {
+        e.setAttribute("disabled", true);
+      });
+  } else if (currentlySelected != 3) {
+    console.log("else");
+    document
+      .querySelectorAll("input[name=toImprove]:not(:checked)")
+      .forEach((e) => {
+        e.removeAttribute("disabled");
+      });
+  }
+}
+
+function getCheckboxCount() {
+  return document.querySelectorAll("input[name=toImprove]:checked").length;
 }
