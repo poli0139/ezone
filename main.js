@@ -1,12 +1,8 @@
-// import './style.css'
-
-// document.querySelector('#app').innerHTML = `
-//   <h1>Hello Vite!</h1>
-//   <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
-// `
+"use strict";
 
 //SWIPPING OF STEPS
 const intro = document.querySelector(".introSec");
+const stepsNumbers = document.querySelector(".stepRow");
 const firstStep = document.querySelector(".firstStep");
 const secondStep = document.querySelector(".secondStep");
 const thirdStep = document.querySelector(".thirdStep");
@@ -14,9 +10,7 @@ const fourthStep = document.querySelector(".fourthStep");
 const confirmation = document.querySelector(".confirmationDiv");
 const formSection = document.querySelector(".formSteps");
 
-var firstName = document.querySelector(
-  "form[name='info'] input[name='firstName']"
-);
+var firstName = document.querySelector("form[name='info'] input[name='firstName']");
 
 const join = document.querySelector("#join");
 const back1 = document.querySelector("#back1");
@@ -34,16 +28,15 @@ join.onclick = function () {
   let result = checkIfValid(firstName);
   // console.log(result);
   if (result == true) {
-    document
-      .querySelector("form[name='info']")
-      .addEventListener("submit", function (e) {
-        e.preventDefault();
-      });
+    document.querySelector("form[name='info']").addEventListener("submit", function (e) {
+      e.preventDefault();
+    });
     intro.style.left = "-65rem";
     firstStep.style.left = "2.8rem";
     formSection.classList.remove("themeGreen");
     formSection.classList.remove("themeOrange");
     formSection.classList.add("themeBlue");
+    stepsNumbers.style.left = "13rem";
   } else {
     console.log(result);
   }
@@ -56,6 +49,7 @@ back1.onclick = function () {
   formSection.classList.remove("themeGreen");
   formSection.classList.remove("themeOrange");
   formSection.classList.remove("themeBlue");
+  stepsNumbers.style.left = "65rem";
 };
 
 continue1.onclick = function () {
@@ -64,6 +58,20 @@ continue1.onclick = function () {
   formSection.classList.remove("themeBlue");
   formSection.classList.remove("themeOrange");
   formSection.classList.add("themeGreen");
+
+  //COLOR CHANGES
+  stepsNumbers.style.color = "#DFFCDF";
+  document.querySelectorAll(".number").forEach((e) => {
+    e.style.borderColor = "#DFFCDF";
+  });
+  document.querySelector(".stepOne").style.backgroundColor = "#DFFCDF";
+  document.querySelector(".stepTwo").style.backgroundColor = "#DFFCDF";
+  document.querySelector(".stepTwo").style.color = "#2b2e4b";
+  document.querySelector(".stepThree").style.color = "#DFFCDF";
+  document.querySelector(".stepFour").style.color = "#DFFCDF";
+  document.querySelectorAll(".numberLine").forEach((e) => {
+    e.style.backgroundColor = "#DFFCDF";
+  });
 };
 
 //STEP 2
@@ -73,6 +81,20 @@ back2.onclick = function () {
   formSection.classList.remove("themeGreen");
   formSection.classList.remove("themeOrange");
   formSection.classList.add("themeBlue");
+
+  //COLOR CHANGES
+  stepsNumbers.style.color = "#cacefc";
+  document.querySelectorAll(".number").forEach((e) => {
+    e.style.borderColor = "#cacefc";
+  });
+  document.querySelector(".stepOne").style.backgroundColor = "#cacefc";
+  document.querySelector(".stepTwo").style.backgroundColor = "#2b2e4b";
+  document.querySelector(".stepTwo").style.color = "#cacefc";
+  document.querySelector(".stepThree").style.color = "#cacefc";
+  document.querySelector(".stepFour").style.color = "#cacefc";
+  document.querySelectorAll(".numberLine").forEach((e) => {
+    e.style.backgroundColor = "#cacefc";
+  });
 };
 
 continue2.onclick = function () {
@@ -81,6 +103,20 @@ continue2.onclick = function () {
   formSection.classList.remove("themeGreen");
   formSection.classList.remove("themeBlue");
   formSection.classList.add("themeOrange");
+
+  //COLOR CHANGES
+  stepsNumbers.style.color = "#ffb591";
+  document.querySelectorAll(".number").forEach((e) => {
+    e.style.borderColor = "#ffb591";
+  });
+  document.querySelector(".stepOne").style.backgroundColor = "#ffb591";
+  document.querySelector(".stepTwo").style.backgroundColor = "#ffb591";
+  document.querySelector(".stepThree").style.backgroundColor = "#ffb591";
+  document.querySelector(".stepThree").style.color = "#2b2e4b";
+  document.querySelector(".stepFour").style.color = "#ffb591";
+  document.querySelectorAll(".numberLine").forEach((e) => {
+    e.style.backgroundColor = "#ffb591";
+  });
 };
 
 //STEP 3
@@ -90,6 +126,22 @@ back3.onclick = function () {
   formSection.classList.remove("themeBlue");
   formSection.classList.remove("themeOrange");
   formSection.classList.add("themeGreen");
+
+  //COLOR CHANGES
+  stepsNumbers.style.color = "#DFFCDF";
+  document.querySelectorAll(".number").forEach((e) => {
+    e.style.borderColor = "#DFFCDF";
+  });
+  document.querySelector(".stepOne").style.backgroundColor = "#DFFCDF";
+  document.querySelector(".stepTwo").style.backgroundColor = "#DFFCDF";
+  document.querySelector(".stepTwo").style.color = "#2b2e4b";
+  document.querySelector(".stepThree").style.backgroundColor = "#2b2e4b";
+  document.querySelector(".stepThree").style.color = "#DFFCDF";
+  document.querySelector(".stepFour").style.backgroundColor = "#2b2e4b";
+  document.querySelector(".stepFour").style.color = "#DFFCDF";
+  document.querySelectorAll(".numberLine").forEach((e) => {
+    e.style.backgroundColor = "#DFFCDF";
+  });
 };
 
 continue3.onclick = function () {
@@ -98,6 +150,20 @@ continue3.onclick = function () {
   formSection.classList.remove("themeGreen");
   formSection.classList.remove("themeOrange");
   formSection.classList.add("themeBlue");
+
+  //COLOR CHANGES
+  stepsNumbers.style.color = "#cacefc";
+  document.querySelectorAll(".number").forEach((e) => {
+    e.style.borderColor = "#cacefc";
+  });
+  document.querySelector(".stepOne").style.backgroundColor = "#cacefc";
+  document.querySelector(".stepTwo").style.backgroundColor = "#cacefc";
+  document.querySelector(".stepThree").style.backgroundColor = "#cacefc";
+  document.querySelector(".stepFour").style.backgroundColor = "#cacefc";
+  document.querySelector(".stepFour").style.color = "#2b2e4b";
+  document.querySelectorAll(".numberLine").forEach((e) => {
+    e.style.backgroundColor = "#cacefc";
+  });
 };
 
 //STEP 4
@@ -107,10 +173,26 @@ back4.onclick = function () {
   formSection.classList.remove("themeGreen");
   formSection.classList.remove("themeBlue");
   formSection.classList.add("themeOrange");
+
+  //COLOR CHANGES
+  stepsNumbers.style.color = "#ffb591";
+  document.querySelectorAll(".number").forEach((e) => {
+    e.style.borderColor = "#ffb591";
+  });
+  document.querySelector(".stepOne").style.backgroundColor = "#ffb591";
+  document.querySelector(".stepTwo").style.backgroundColor = "#ffb591";
+  document.querySelector(".stepThree").style.backgroundColor = "#ffb591";
+  document.querySelector(".stepThree").style.color = "#2b2e4b";
+  document.querySelector(".stepFour").style.color = "#ffb591";
+  document.querySelector(".stepFour").style.backgroundColor = "#2b2e4b";
+  document.querySelectorAll(".numberLine").forEach((e) => {
+    e.style.backgroundColor = "#ffb591";
+  });
 };
 
 continue4.onclick = function () {
   fourthStep.style.left = "-65rem";
+  stepsNumbers.style.left = "-65rem";
   confirmation.style.left = "2.8rem";
   formSection.classList.remove("themeGreen");
   formSection.classList.remove("themeBlue");
@@ -120,6 +202,7 @@ continue4.onclick = function () {
 //CONFIRMATION
 back5.onclick = function () {
   intro.style.left = "2.8rem";
+  stepsNumbers.style.left = "65rem";
   firstStep.style.left = "65rem";
   confirmation.style.left = "65rem";
   secondStep.style.left = "65rem";
@@ -128,6 +211,23 @@ back5.onclick = function () {
   formSection.classList.remove("themeGreen");
   formSection.classList.remove("themeOrange");
   formSection.classList.remove("themeBlue");
+
+  //COLOR CHANGES
+  stepsNumbers.style.color = "#cacefc";
+  document.querySelectorAll(".number").forEach((e) => {
+    e.style.borderColor = "#cacefc";
+  });
+  document.querySelector(".stepOne").style.color = "#2b2e4b";
+  document.querySelector(".stepOne").style.backgroundColor = "#cacefc";
+  document.querySelector(".stepTwo").style.color = "#cacefc";
+  document.querySelector(".stepTwo").style.backgroundColor = "#2b2e4b";
+  document.querySelector(".stepThree").style.color = "#cacefc";
+  document.querySelector(".stepThree").style.backgroundColor = "#2b2e4b";
+  document.querySelector(".stepFour").style.color = "#cacefc";
+  document.querySelector(".stepFour").style.backgroundColor = "#2b2e4b";
+  document.querySelectorAll(".numberLine").forEach((e) => {
+    e.style.backgroundColor = "#cacefc";
+  });
 };
 
 //PASSWORD TOGGLE
