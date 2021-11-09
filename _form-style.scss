@@ -187,13 +187,20 @@
   }
 
   .confirmationDiv {
+    left: 65rem;
+
+    width: 90%;
+    margin: 0;
+    position: absolute;
+    transition: 0.8s;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-left: 4rem;
     padding-right: 4rem;
-    padding-top: 2rem;
+    padding-top: 1rem;
     padding-bottom: 2rem;
 
     h1 {
