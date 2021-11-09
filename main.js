@@ -12,6 +12,11 @@ const secondStep = document.querySelector(".secondStep");
 const thirdStep = document.querySelector(".thirdStep");
 const fourthStep = document.querySelector(".fourthStep");
 const confirmation = document.querySelector(".confirmationDiv");
+const formSection = document.querySelector(".formSteps");
+
+var firstName = document.querySelector(
+  "form[name='info'] input[name='firstName']"
+);
 
 const join = document.querySelector("#join");
 const back1 = document.querySelector("#back1");
@@ -26,52 +31,90 @@ const back5 = document.querySelector("#back5");
 
 //INTRO
 join.onclick = function () {
-  intro.style.left = "-65rem";
-  firstStep.style.left = "2.8rem";
+  let result = checkIfValid(firstName);
+  // console.log(result);
+  if (result == true) {
+    document
+      .querySelector("form[name='info']")
+      .addEventListener("submit", function (e) {
+        e.preventDefault();
+      });
+    intro.style.left = "-65rem";
+    firstStep.style.left = "2.8rem";
+    formSection.classList.remove("themeGreen");
+    formSection.classList.remove("themeOrange");
+    formSection.classList.add("themeBlue");
+  } else {
+    console.log(result);
+  }
 };
 
 //STEP 1
 back1.onclick = function () {
   intro.style.left = "2.8rem";
   firstStep.style.left = "65rem";
+  formSection.classList.remove("themeGreen");
+  formSection.classList.remove("themeOrange");
+  formSection.classList.remove("themeBlue");
 };
 
 continue1.onclick = function () {
   firstStep.style.left = "-65rem";
   secondStep.style.left = "2.8rem";
+  formSection.classList.remove("themeBlue");
+  formSection.classList.remove("themeOrange");
+  formSection.classList.add("themeGreen");
 };
 
 //STEP 2
 back2.onclick = function () {
   firstStep.style.left = "2.8rem";
   secondStep.style.left = "65rem";
+  formSection.classList.remove("themeGreen");
+  formSection.classList.remove("themeOrange");
+  formSection.classList.add("themeBlue");
 };
 
 continue2.onclick = function () {
   secondStep.style.left = "-65rem";
   thirdStep.style.left = "2.8rem";
+  formSection.classList.remove("themeGreen");
+  formSection.classList.remove("themeBlue");
+  formSection.classList.add("themeOrange");
 };
 
 //STEP 3
 back3.onclick = function () {
   secondStep.style.left = "2.8rem";
   thirdStep.style.left = "65rem";
+  formSection.classList.remove("themeBlue");
+  formSection.classList.remove("themeOrange");
+  formSection.classList.add("themeGreen");
 };
 
 continue3.onclick = function () {
   thirdStep.style.left = "-65rem";
   fourthStep.style.left = "2.8rem";
+  formSection.classList.remove("themeGreen");
+  formSection.classList.remove("themeOrange");
+  formSection.classList.add("themeBlue");
 };
 
 //STEP 4
 back4.onclick = function () {
   thirdStep.style.left = "2.8rem";
   fourthStep.style.left = "65rem";
+  formSection.classList.remove("themeGreen");
+  formSection.classList.remove("themeBlue");
+  formSection.classList.add("themeOrange");
 };
 
 continue4.onclick = function () {
   fourthStep.style.left = "-65rem";
   confirmation.style.left = "2.8rem";
+  formSection.classList.remove("themeGreen");
+  formSection.classList.remove("themeBlue");
+  formSection.classList.add("themeOrange");
 };
 
 //CONFIRMATION
@@ -82,6 +125,9 @@ back5.onclick = function () {
   secondStep.style.left = "65rem";
   thirdStep.style.left = "65rem";
   fourthStep.style.left = "65rem";
+  formSection.classList.remove("themeGreen");
+  formSection.classList.remove("themeOrange");
+  formSection.classList.remove("themeBlue");
 };
 
 //PASSWORD TOGGLE
@@ -110,4 +156,8 @@ function togglePW2() {
     repeatPassword.setAttribute("type", "password");
     document.getElementById("eye2").style.color = "#6a678b";
   }
+}
+
+function checkIfValid(input) {
+  return input.checkValidity();
 }

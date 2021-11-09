@@ -20,7 +20,6 @@
     margin: auto;
     line-height: 1;
     letter-spacing: 0.5rem;
-    color: variables.$orangeLight;
     text-transform: uppercase;
 
     .outlineText {
@@ -35,10 +34,6 @@
     font-size: variables.$h2-size;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
-  }
-
-  .thirdStep h2 {
-    color: variables.$orangeLight;
   }
 
   h3 {
@@ -56,7 +51,7 @@
     text-transform: uppercase;
     line-height: 1.5;
     letter-spacing: 0.1rem;
-    font-weight: lighter;
+    font-weight: 100;
   }
 
   h5 {
@@ -97,6 +92,7 @@
   height: 75vh;
   display: flex;
   justify-content: center;
+  transition: all 1s;
 
   .introSec {
     left: 2.8rem;
@@ -293,6 +289,11 @@
     letter-spacing: 5px;
     text-align: left;
     row-gap: 0.2rem;
+    p {
+      margin: 0;
+      width: 100%;
+      font-size: 12px;
+    }
   }
   input[type="checkbox"] {
     align-self: center;
@@ -306,7 +307,8 @@
     transition: all 0.3s;
   }
 
-  input[type="text"] {
+  input[type="text"],
+  input[type="email"] {
     background: none;
     border: none;
     border-bottom: solid variables.$orangeLight 2px;

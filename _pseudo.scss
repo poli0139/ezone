@@ -2,23 +2,19 @@
 
 //TYPE TEXT
 
-input[type="text"]:focus {
+input[type="text"]:focus,
+input[type="email"]:focus {
   outline: none;
   caret-color: white;
 }
-input[type="text"]:hover {
+input[type="text"]:hover,
+input[type="email"]:focus {
   cursor: pointer;
-}
-
-input[type="text"]:hover::placeholder {
-  color: #696780;
-  transition: all 0.4s;
 }
 
 //CHECKBOX
 
 input[type="checkbox"]:checked {
-  background-color: white;
   transition: all 0.3s;
 }
 .checkboxLabel:hover {
