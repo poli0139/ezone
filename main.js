@@ -9,6 +9,8 @@
 const firstStep = document.querySelector(".firstStep");
 const secondStep = document.querySelector(".secondStep");
 const thirdStep = document.querySelector(".thirdStep");
+const fourthStep = document.querySelector(".fourthStep");
+const confirmation = document.querySelector(".confirmationDiv");
 
 const back1 = document.querySelector("#back1");
 const continue1 = document.querySelector("#continue1");
@@ -16,15 +18,56 @@ const back2 = document.querySelector("#back2");
 const continue2 = document.querySelector("#continue2");
 const back3 = document.querySelector("#back3");
 const continue3 = document.querySelector("#continue3");
+const back4 = document.querySelector("#back4");
+const continue4 = document.querySelector("#continue4");
+const back5 = document.querySelector("#back5");
 
+//STEP 1
 continue1.onclick = function () {
   firstStep.style.left = "-65rem";
   secondStep.style.left = "2.8rem";
 };
 
+//STEP 2
 back2.onclick = function () {
   firstStep.style.left = "2.8rem";
   secondStep.style.left = "65rem";
+};
+
+continue2.onclick = function () {
+  secondStep.style.left = "-65rem";
+  thirdStep.style.left = "2.8rem";
+};
+
+//STEP 3
+back3.onclick = function () {
+  secondStep.style.left = "2.8rem";
+  thirdStep.style.left = "65rem";
+};
+
+continue3.onclick = function () {
+  thirdStep.style.left = "-65rem";
+  fourthStep.style.left = "2.8rem";
+};
+
+//STEP 4
+back4.onclick = function () {
+  thirdStep.style.left = "2.8rem";
+  fourthStep.style.left = "65rem";
+};
+
+continue4.onclick = function () {
+  fourthStep.style.left = "-65rem";
+  confirmation.style.left = "2.8rem";
+};
+
+//CONFIRMATION
+back5.onclick = function () {
+  firstStep.style.left = "2.8rem";
+  confirmation.style.left = "65rem";
+  secondStep.style.left = "65rem";
+  thirdStep.style.left = "65rem";
+  fourthStep.style.left = "65rem";
 };
 
 //PASSWORD TOGGLE
