@@ -155,7 +155,7 @@
     margin-top: 2rem;
   }
 
-  .fourthStep {
+  .fo urthStep {
     left: 65rem;
 
     h2 {
@@ -182,7 +182,7 @@
         span {
           position: absolute;
           right: 28.5rem;
-          top: 21rem;
+          top: 20rem;
           cursor: pointer;
 
           .fa {
@@ -196,7 +196,7 @@
         span {
           position: absolute;
           right: 7.5rem;
-          top: 21rem;
+          top: 20rem;
           cursor: pointer;
 
           .fa {
@@ -278,7 +278,7 @@
   .checkboxes {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    row-gap: 1rem;
+    row-gap: 0.3rem;
     column-gap: 1rem;
     margin: auto auto auto 2rem;
   }
