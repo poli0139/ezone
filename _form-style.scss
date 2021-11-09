@@ -69,9 +69,6 @@
   }
 
   p {
-    width: 60%;
-    // border: solid white 1px;
-    margin: 5rem auto 0 auto;
     line-height: 1.5;
     font-family: variables.$uniformMedium;
     font-size: variables.$p-size;
@@ -82,11 +79,6 @@
   }
   .greenSpan {
     color: variables.$greenLight;
-  }
-
-  form {
-    margin: 3rem 4rem;
-    position: relative;
   }
 }
 
@@ -106,7 +98,40 @@
   display: flex;
   justify-content: center;
 
-  form {
+  .introSec {
+    left: 2.8rem;
+
+    width: 90%;
+    margin: 0;
+    position: absolute;
+    transition: 0.8s;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: center;
+    align-content: center;
+    padding-top: 2rem;
+
+    p {
+      width: 70%;
+      margin: auto;
+    }
+
+    form {
+      width: 60%;
+      margin: auto;
+    }
+
+    .closeButtonDiv {
+      align-self: flex-start;
+      margin-top: -4rem;
+      margin-left: -2rem;
+      width: 18rem;
+    }
+  }
+
+  .stepsForms {
     width: 90%;
     margin: 0;
     margin-top: 1rem;
@@ -115,7 +140,7 @@
   }
 
   .firstStep {
-    left: 2.8rem;
+    left: 65rem;
   }
 
   .secondStep {
@@ -157,7 +182,7 @@
         span {
           position: absolute;
           right: 28.5rem;
-          top: 21rem;
+          top: 20rem;
           cursor: pointer;
 
           .fa {
@@ -171,7 +196,7 @@
         span {
           position: absolute;
           right: 7.5rem;
-          top: 21rem;
+          top: 20rem;
           cursor: pointer;
 
           .fa {
@@ -210,10 +235,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-left: 4rem;
-    padding-right: 4rem;
-    padding-top: 1rem;
-    padding-bottom: 2rem;
+    padding-top: 1.4rem;
 
     h1 {
       letter-spacing: 0.8rem;
@@ -256,7 +278,7 @@
   .checkboxes {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    row-gap: 1rem;
+    row-gap: 0.3rem;
     column-gap: 1rem;
     margin: auto auto auto 2rem;
   }
@@ -322,13 +344,9 @@ button {
   transition: background-color 0.5s ease-in-out;
 }
 
-button.join:hover,
-button.continue:hover,
-button.backToEzone:hover {
-  background-color: variables.$orangeLight;
-  color: variables.$modalBG;
-  transition: color 0.8s ease-in-out;
-  transition: background-color 0.5s ease-in-out;
+button.closeModal,
+button.goBack {
+  transition: 0.2s ease-in-out;
 }
 
 .join {
@@ -344,6 +362,19 @@ button.backToEzone:hover {
   letter-spacing: 3px;
   padding: 1rem 2rem;
   margin-top: 2rem;
+}
+
+.closeModal {
+  font-family: variables.$uniformMedium;
+  background: none;
+  color: white;
+  border: none;
+  font-size: 0.7rem;
+  font-weight: lighter;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: 1rem 2rem;
+  line-height: 1rem;
 }
 
 .btnBox {
@@ -392,4 +423,19 @@ button.backToEzone:hover {
   letter-spacing: 3px;
   padding: 1rem 2rem;
   margin-top: 1rem;
+}
+
+button.join:hover,
+button.continue:hover,
+button.backToEzone:hover {
+  background-color: variables.$orangeLight;
+  color: variables.$modalBG;
+  transition: color 0.8s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
+}
+
+button.closeModal:hover,
+button.goBack:hover {
+  color: variables.$orangeLight;
+  transition: 0.2s ease-in-out;
 }
