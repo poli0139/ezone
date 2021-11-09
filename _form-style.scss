@@ -302,6 +302,14 @@
   }
 }
 
+//FORM NUMBERS
+.numbers {
+  display: flex;
+  justify-content: space-evenly;
+  font-family: variables.$uniformMedium;
+  font-size: variables.$h2-size;
+}
+
 //BUTTON
 
 button {
