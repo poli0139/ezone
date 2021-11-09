@@ -22,6 +22,12 @@
     letter-spacing: 0.5rem;
     color: variables.$orangeLight;
     text-transform: uppercase;
+
+    .outlineText {
+      color: transparent;
+      -webkit-text-stroke: 1px variables.$orangeLight;
+      -webkit-text-fill-color: transparent;
+    }
   }
 
   h2 {
@@ -113,12 +119,21 @@
   }
 
   .fourthStep {
+    left: 65rem;
+
     h2 {
-      margin-bottom: 4rem;
+      margin-bottom: 3rem;
     }
 
-    div {
-      margin-bottom: 2rem;
+    .fourthStepInputs {
+      padding-left: 6rem;
+      padding-right: 6rem;
+      div {
+        margin-bottom: 1.3rem;
+      }
+      input[type="text"] {
+        width: 100%;
+      }
     }
 
     #passwordDiv {
@@ -130,7 +145,7 @@
         span {
           position: absolute;
           right: 28.5rem;
-          top: 66%;
+          top: 21rem;
           cursor: pointer;
 
           .fa {
@@ -138,6 +153,60 @@
             color: variables.$placeholderColor;
           }
         }
+      }
+
+      .password2 {
+        span {
+          position: absolute;
+          right: 7.5rem;
+          top: 21rem;
+          cursor: pointer;
+
+          .fa {
+            font-size: variables.$placeholder-size;
+            color: variables.$placeholderColor;
+          }
+        }
+      }
+    }
+    input[type="text"] {
+      background: none;
+      border: none;
+      border-bottom: solid variables.$orangeLight 2px;
+      font-family: variables.$uniformBlack;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      width: 85%;
+      height: 2rem;
+      color: variables.$bluePastel;
+    }
+
+    .btnBox {
+      margin-top: -2rem;
+    }
+  }
+
+  .confirmationDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    h1 {
+      letter-spacing: 0.8rem;
+      line-height: 4rem;
+    }
+    .completeLogo {
+      height: 13rem;
+      width: 13rem;
+      margin-top: 1rem;
+
+      img {
+        max-width: 100%;
       }
     }
   }
@@ -178,7 +247,7 @@
   text-transform: uppercase;
   letter-spacing: 5px;
   text-align: left;
-  row-gap: 1rem;
+  row-gap: 0.2rem;
 }
 input[type="checkbox"] {
   align-self: center;
@@ -205,7 +274,6 @@ input[type="password"] {
   text-transform: uppercase;
   letter-spacing: 3px;
   width: 100%;
-  margin-top: 1rem;
   height: 2rem;
   color: variables.$bluePastel;
 }
@@ -219,6 +287,17 @@ input[type="password"] {
 
 button {
   cursor: pointer;
+  transition: color 0.8s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
+}
+
+button.join:hover,
+button.continue:hover,
+button.backToEzone:hover {
+  background-color: variables.$orangeLight;
+  color: variables.$modalBG;
+  transition: color 0.8s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
 }
 
 .join {
@@ -267,4 +346,19 @@ button {
   letter-spacing: 3px;
   padding: 1rem 2rem;
   margin-top: 2rem;
+}
+
+.backToEzone {
+  font-family: variables.$uniformBlack;
+  background: none;
+  color: white;
+  border: solid variables.$orangeLight 3px;
+  border-radius: 80px;
+  box-shadow: none;
+  font-size: 1.4rem;
+  font-weight: lighter;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: 1rem 2rem;
+  margin-top: 1rem;
 }

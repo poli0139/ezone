@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.scss" />
     <title>Ezone</title>
@@ -14,7 +13,7 @@
       <section class="modalSection introSec hidden">
         <h1>
           Join our <br />
-          ecommunity
+          <span class="outlineText">ecommunity</span>
         </h1>
 
         <p>
@@ -204,36 +203,47 @@
         <form action="" class="fourthStep">
           <h2>Lastly, <br />tell us the boring stuff</h2>
 
-          <div id="lastNameDiv" class="inputDiv">
-            <label for="lastName" class="textLabel">Last name</label>
-            <input type="text" id="lastName" name="lastName" placeholder="Last name" />
-          </div>
-
-          <div id="emailDiv" class="inputDiv">
-            <label for="email" class="textLabel">Email</label>
-            <input type="text" id="email" name="email" placeholder="Email" />
-          </div>
-
-          <div id="passwordDiv" class="inputDiv">
-            <div class="password1">
-              <label for="password" class="textLabel">Create password</label>
-              <input type="password" id="password" name="password" placeholder="password" />
-              <span>
-                <i class="fa fa-eye" id="font" onclick="togglePW()" aria-hidden="true"></i>
-              </span>
+          <div class="fourthStepInputs">
+            <div id="lastNameDiv" class="inputDiv">
+              <label for="lastName" class="textLabel">Last name</label>
+              <input type="text" id="lastName" name="lastName" placeholder="Last name" />
             </div>
 
-            <div>
-              <label for="repeatPassword" class="textLabel">Repeat password</label>
-              <input type="password" id="repeatPassword" name="repeatPassword" placeholder="password" />
+            <div id="emailDiv" class="inputDiv">
+              <label for="email" class="textLabel">Email</label>
+              <input type="text" id="email" name="email" placeholder="Email" />
             </div>
-          </div>
 
-          <div class="btnBox">
-            <button type="button" class="goBack" id="back4">Go back</button>
-            <button type="submit" class="continue" id="submit">submit</button>
+            <div id="passwordDiv" class="inputDiv">
+              <div class="password1">
+                <label for="password" class="textLabel">Create password</label>
+                <input type="password" id="password" name="password" placeholder="password" />
+                <span>
+                  <i class="fa fa-eye" id="eye" aria-hidden="true"></i>
+                </span>
+              </div>
+
+              <div class="password2">
+                <label for="repeatPassword" class="textLabel">Repeat password</label>
+                <input type="password" id="repeatPassword" name="repeatPassword" placeholder="password" />
+                <span>
+                  <i class="fa fa-eye" id="eye2" aria-hidden="true"></i>
+                </span>
+              </div>
+            </div>
+
+            <div class="btnBox">
+              <button type="button" class="goBack" id="back4">Go back</button>
+              <button type="submit" class="continue" id="submit">submit</button>
+            </div>
           </div>
         </form>
+
+        <div class="confirmationDiv">
+          <h1>Thank you for joining our <span class="outlineText">ecommunity</span></h1>
+          <div class="completeLogo"><img src="images/complete.svg" alt="complete" /></div>
+          <button class="backToEzone">back to ezone</button>
+        </div>
       </section>
     </div>
 
