@@ -1,1 +1,63 @@
 @use "variables";
+
+//BLUE
+.themeBlue {
+  border: solid variables.$bluePastel 5px;
+  h1,
+  h2,
+  .goBack:hover {
+    color: variables.$bluePastel;
+    transition: all 1s;
+  }
+
+  .fourthStepInputs input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    border-bottom: solid variables.$bluePastel 2px;
+  }
+  .continue {
+    border: solid variables.$bluePastel 2px;
+  }
+  .continue:hover,
+  input[type="checkbox"]:checked {
+    background-color: variables.$bluePastel;
+  }
+  transition: all 1s;
+}
+
+//GREEN
+.themeGreen {
+  border: solid variables.$greenPastel 5px;
+  h1,
+  h2,
+  .goBack:hover {
+    color: variables.$greenPastel;
+    transition: all 1s;
+  }
+  .continue {
+    border: solid variables.$greenPastel 2px;
+  }
+  .continue:hover,
+  input[type="checkbox"]:checked {
+    background-color: variables.$greenPastel;
+  }
+  transition: all 1s;
+}
+
+.themeOrange {
+  border: solid variables.$orangeLight 5px;
+  h1,
+  h2,
+  .goBack:hover {
+    color: variables.$orangeLight;
+    transition: all 1s;
+  }
+  .continue {
+    border: solid variables.$orangeLight 2px;
+  }
+  .continue:hover,
+  input[type="checkbox"]:checked {
+    background-color: variables.$orangeLight;
+  }
+  transition: all 1s;
+}
