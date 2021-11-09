@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link data-n-head="ssr" rel="icon" type="image/x-icon" href="images/favicon.png" />
+    <link
+      data-n-head="ssr"
+      rel="icon"
+      type="image/x-icon"
+      href="images/favicon.png"
+    />
     <link rel="stylesheet" href="style.scss" />
     <title>Ezone</title>
   </head>
@@ -23,7 +28,8 @@
           <div class="introText">
             <p>
               Join hundreds of other athletes in becoming part of the
-              <span class="orangeSpan">EZONE community</span> and get the <span class="greenSpan">newest</span> and most
+              <span class="orangeSpan">EZONE community</span> and get the
+              <span class="greenSpan">newest</span> and most
               <span class="greenSpan">relevant</span>
               advice and guidance to achieve your
               <span class="greenSpan">best performance</span> based on your
@@ -34,16 +40,30 @@
           <div>
             <form name="info" class="info" action="">
               <div id="firstNameDiv" class="inputDiv">
-                <label for="firstName" class="textLabel">Tell us your first name</label>
-                <input autocomplete="off" type="text" id="firstName" name="firstName" placeholder="First name" required autofocus />
+                <label for="firstName" class="textLabel"
+                  >Tell us your first name</label
+                >
+                <input
+                  autocomplete="off"
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  placeholder="First name"
+                  required
+                  autofocus
+                />
                 <p class="err-message hidden">Please, enter your name</p>
               </div>
-              <button type="submit" class="join" id="join">Join the game</button>
+              <button type="submit" class="join" id="join">
+                Join the game
+              </button>
             </form>
           </div>
 
           <div class="closeButtonDiv">
-            <button class="closeModal">No thanks, I don't want to be part of this amazing community</button>
+            <button class="closeModal">
+              No thanks, I don't want to be part of this amazing community
+            </button>
           </div>
         </div>
 
@@ -58,7 +78,7 @@
             <div class="number stepFour">4</div>
           </div>
 
-          <form action="" class="stepsForms firstStep">
+          <form action="" class="stepsForms firstStep" name="firstStep">
             <h1>Hi, <span class="firstStepName">Jonas</span> !</h1>
             <h2>let us help you up your gaming</h2>
             <h4>
@@ -66,257 +86,267 @@
               what areas do you need help improving?
             </h4>
             <h5>select up to 3</h5>
+            <h5 class="err-message hidden">Please, select at least 1</h5>
             <div class="checkboxes">
               <label for="hand/eye" class="checkboxLabel">
-                <input type="checkbox" id="hand/eye" />
+                <input name="gameType" type="checkbox" id="hand/eye" />
                 Hand/Eye Coordination
               </label>
 
               <label for="reaction" class="checkboxLabel">
-                <input type="checkbox" id="reaction" />
+                <input name="toImprove" type="checkbox" id="reaction" />
                 Reaction Time
               </label>
 
               <label for="hearing" class="checkboxLabel">
-                <input type="checkbox" id="Hearing" />
+                <input name="toImprove" type="checkbox" id="hearing" />
                 Hearing
               </label>
 
               <label for="vision" class="checkboxLabel">
-                <input type="checkbox" id="vision" />
+                <input name="toImprove" type="checkbox" id="vision" />
                 Vision
               </label>
 
               <label for="communication" class="checkboxLabel">
-                <input type="checkbox" id="communication" />
+                <input name="toImprove" type="checkbox" id="communication" />
                 Communication
               </label>
 
               <label for="multiTasking" class="checkboxLabel">
-                <input type="checkbox" id="multiTasking" />
+                <input name="toImprove" type="checkbox" id="multiTasking" />
                 Multi-Tasking
               </label>
 
               <label for="mindset" class="checkboxLabel">
-                <input type="checkbox" id="mindset" />
+                <input name="toImprove" type="checkbox" id="mindset" />
                 Mindset
               </label>
 
               <label for="nutrition" class="checkboxLabel">
-                <input type="checkbox" id="nutrition" />
+                <input name="toImprove" type="checkbox" id="nutrition" />
                 Nutrition
               </label>
 
               <label for="injuries" class="checkboxLabel">
-                <input type="checkbox" id="injuries" />
+                <input name="toImprove" type="checkbox" id="injuries" />
                 Injuries
               </label>
 
               <label for="technology" class="checkboxLabel">
-                <input type="checkbox" id="technology" />
+                <input name="toImprove" type="checkbox" id="technology" />
                 Technology
               </label>
 
               <label for="physiology" class="checkboxLabel">
-                <input type="checkbox" id="physiology" />
+                <input name="toImprove" type="checkbox" id="physiology" />
                 Physiology
               </label>
 
               <label for="sleep" class="checkboxLabel">
-                <input type="checkbox" id="sleep" />
+                <input name="toImprove" type="checkbox" id="sleep" />
                 Sleep
               </label>
 
               <label for="stress" class="checkboxLabel">
-                <input type="checkbox" id="stress" />
+                <input name="toImprove" type="checkbox" id="stress" />
                 Stress
               </label>
 
               <label for="tactical" class="checkboxLabel">
-                <input type="checkbox" id="tactical" />
+                <input name="toImprove" type="checkbox" id="tactical" />
                 Tactical
               </label>
 
               <label for="strategy" class="checkboxLabel">
-                <input type="checkbox" id="strategy" />
+                <input name="toImprove" type="checkbox" id="strategy" />
                 Strategy
               </label>
 
               <label for="leadership" class="checkboxLabel">
-                <input type="checkbox" id="leadership" />
+                <input name="toImprove" type="checkbox" id="leadership" />
                 Leadership
               </label>
             </div>
 
             <div class="btnBox">
               <button type="button" class="goBack" id="back1">Go back</button>
-              <button type="button" class="continue" id="continue1">Continue</button>
+              <button type="button" class="continue" id="continue1">
+                Continue
+              </button>
             </div>
           </form>
 
-          <form action="" class="stepsForms secondStep">
+          <form name="secondStep" action="" class="stepsForms secondStep">
             <h2>we can definitely help you with those areas! now tell us...</h2>
             <h3>What kind of games do you like to play?</h3>
             <h5>select up to 3</h5>
+            <h5 class="err-message hidden">Please, select at least 1</h5>
+
             <div class="checkboxes">
               <label for="fps" class="checkboxLabel">
                 <input type="checkbox" id="fps" />
                 FPS
               </label>
               <label for="mmorpg" class="checkboxLabel">
-                <input type="checkbox" id="mmorpg" />
+                <input name="gameType" type="checkbox" id="mmorpg" />
                 MMORPG
               </label>
               <label for="sports" class="checkboxLabel">
-                <input type="checkbox" id="sports" />
+                <input name="gameType" type="checkbox" id="sports" />
                 Sports
               </label>
               <label for="racing" class="checkboxLabel">
-                <input type="checkbox" id="racing" />
+                <input name="gameType" type="checkbox" id="racing" />
                 Racing
               </label>
               <label for="towerDefense" class="checkboxLabel">
-                <input type="checkbox" id="towerDefense" />
+                <input name="gameType" type="checkbox" id="towerDefense" />
                 Tower defense
               </label>
               <label for="rts" class="checkboxLabel">
-                <input type="checkbox" id="rts" />
+                <input name="gameType" type="checkbox" id="rts" />
                 RTS
               </label>
               <label for="simulation" class="checkboxLabel">
-                <input type="checkbox" id="simulation" />
+                <input name="gameType" type="checkbox" id="simulation" />
                 Simulation
               </label>
               <label for="rolePlaying" class="checkboxLabel">
-                <input type="checkbox" id="rolePlaying" />
+                <input name="gameType" type="checkbox" id="rolePlaying" />
                 Role-playing
               </label>
               <label for="adventure" class="checkboxLabel">
-                <input type="checkbox" id="adventure" />
+                <input name="gameType" type="checkbox" id="adventure" />
                 Adventure
               </label>
               <label for="survival" class="checkboxLabel">
-                <input type="checkbox" id="survival" />
+                <input name="gameType" type="checkbox" id="survival" />
                 Survival
               </label>
               <label for="fighting" class="checkboxLabel">
-                <input type="checkbox" id="fighting" />
+                <input name="gameType" type="checkbox" id="fighting" />
                 Fighting
               </label>
               <label for="battleRoyale" class="checkboxLabel">
-                <input type="checkbox" id="battleRoyale" />
+                <input name="gameType" type="checkbox" id="battleRoyale" />
                 Battle royale
               </label>
               <label for="rythm" class="checkboxLabel">
-                <input type="checkbox" id="rythm" />
+                <input name="gameType" type="checkbox" id="rythm" />
                 Rythm
               </label>
               <label for="platform" class="checkboxLabel">
-                <input type="checkbox" id="platform" />
+                <input name="gameType" type="checkbox" id="platform" />
                 Platform
               </label>
             </div>
 
             <div class="btnBox">
               <button type="button" class="goBack" id="back2">Go back</button>
-              <button type="button" class="continue" id="continue2">Continue</button>
+              <button type="button" class="continue" id="continue2">
+                Continue
+              </button>
             </div>
           </form>
 
-          <form action="" class="stepsForms thirdStep">
+          <form name="thirdStep" action="" class="stepsForms thirdStep">
             <h2>Nice!</h2>
             <h2>Now for the hard part...</h2>
             <h3>Which are your favorite games?</h3>
             <h5>select up to 3</h5>
+            <h5 class="err-message hidden">Please, select at least 1</h5>
             <div class="checkboxes">
               <label for="csgo" class="checkboxLabel">
-                <input type="checkbox" id="csgo" />
+                <input name="game" type="checkbox" id="csgo" />
                 CS:GO
               </label>
               <label for="tekken" class="checkboxLabel">
-                <input type="checkbox" id="tekken" />
+                <input name="game" type="checkbox" id="tekken" />
                 Tekken
               </label>
               <label for="fifa" class="checkboxLabel">
-                <input type="checkbox" id="fifa" />
+                <input name="game" type="checkbox" id="fifa" />
                 Fifa
               </label>
               <label for="supermario" class="checkboxLabel">
-                <input type="checkbox" id="supermario" />
+                <input name="game" type="checkbox" id="supermario" />
                 Super Mario
               </label>
               <label for="fortnite" class="checkboxLabel">
-                <input type="checkbox" id="fortnite" />
+                <input name="game" type="checkbox" id="fortnite" />
                 Fortnite
               </label>
               <label for="cod" class="checkboxLabel">
-                <input type="checkbox" id="cod" />
+                <input name="game" type="checkbox" id="cod" />
                 Call of Duty
               </label>
               <label for="sims" class="checkboxLabel">
-                <input type="checkbox" id="sims" />
+                <input name="game" type="checkbox" id="sims" />
                 The Sims
               </label>
               <label for="mortalcombat" class="checkboxLabel">
-                <input type="checkbox" id="mortalcombat" />
+                <input name="game" type="checkbox" id="mortalcombat" />
                 Mortal Combat
               </label>
               <label for="guitarhero" class="checkboxLabel">
-                <input type="checkbox" id="guitarhero" />
+                <input name="game" type="checkbox" id="guitarhero" />
                 Guitar Hero
               </label>
               <label for="wow" class="checkboxLabel">
-                <input type="checkbox" id="wow" />
+                <input name="game" type="checkbox" id="wow" />
                 World of Warcraft
               </label>
               <label for="skyrim" class="checkboxLabel">
-                <input type="checkbox" id="skyrim" />
+                <input name="game" type="checkbox" id="skyrim" />
                 Skyrim
               </label>
               <label for="starcraft" class="checkboxLabel">
-                <input type="checkbox" id="starcraft" />
+                <input name="game" type="checkbox" id="starcraft" />
                 Star Craft
               </label>
               <label for="warcraft" class="checkboxLabel">
-                <input type="checkbox" id="warcraft" />
+                <input name="game" type="checkbox" id="warcraft" />
                 Warcraft
               </label>
               <label for="lol" class="checkboxLabel">
-                <input type="checkbox" id="lol" />
+                <input name="game" type="checkbox" id="lol" />
                 League of Legends
               </label>
               <label for="dota" class="checkboxLabel">
-                <input type="checkbox" id="dota" />
+                <input name="game" type="checkbox" id="dota" />
                 Dota
               </label>
               <label for="valorant" class="checkboxLabel">
-                <input type="checkbox" id="valorant" />
+                <input name="game" type="checkbox" id="valorant" />
                 Valorant
               </label>
               <label for="leftfordead" class="checkboxLabel">
-                <input type="checkbox" id="leftfordead" />
+                <input name="game" type="checkbox" id="leftfordead" />
                 Left for Dead
               </label>
               <label for="overwatch" class="checkboxLabel">
-                <input type="checkbox" id="overwatch" />
+                <input name="game" type="checkbox" id="overwatch" />
                 Overwatch
               </label>
               <label for="pubg" class="checkboxLabel">
-                <input type="checkbox" id="pubg" />
+                <input name="game" type="checkbox" id="pubg" />
                 PUBG
               </label>
               <label for="diablo" class="checkboxLabel">
-                <input type="checkbox" id="diablo" />
+                <input name="game" type="checkbox" id="diablo" />
                 Diablo
               </label>
               <label for="minecraft" class="checkboxLabel">
-                <input type="checkbox" id="minecraft" />
+                <input name="game" type="checkbox" id="minecraft" />
                 Minecraft
               </label>
             </div>
             <div class="btnBox">
               <button type="button" class="goBack" id="back3">Go back</button>
-              <button type="button" class="continue" id="continue3">Continue</button>
+              <button type="button" class="continue" id="continue3">
+                Continue
+              </button>
             </div>
           </form>
 
@@ -326,26 +356,54 @@
             <div class="fourthStepInputs">
               <div id="lastNameDiv" class="inputDiv">
                 <label for="lastName" class="textLabel">Last name</label>
-                <input autocomplete="off" type="text" id="lastName" name="lastName" placeholder="Last name" required />
+                <input
+                  autocomplete="off"
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  placeholder="Last name"
+                  required
+                />
               </div>
 
               <div id="emailDiv" class="inputDiv">
                 <label for="email" class="textLabel">Email</label>
-                <input type="email" id="email" name="email" placeholder="Email" />
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Email"
+                />
               </div>
 
               <div id="passwordDiv" class="inputDiv">
                 <div class="password1">
-                  <label for="password" class="textLabel">Create password</label>
-                  <input type="password" id="password" name="password" placeholder="password" required />
+                  <label for="password" class="textLabel"
+                    >Create password</label
+                  >
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="password"
+                    required
+                  />
                   <span>
                     <i class="fa fa-eye" id="eye" aria-hidden="true"></i>
                   </span>
                 </div>
 
                 <div class="password2">
-                  <label for="repeatPassword" class="textLabel">Repeat password</label>
-                  <input type="password" id="repeatPassword" name="repeatPassword" placeholder="password" required />
+                  <label for="repeatPassword" class="textLabel"
+                    >Repeat password</label
+                  >
+                  <input
+                    type="password"
+                    id="repeatPassword"
+                    name="repeatPassword"
+                    placeholder="password"
+                    required
+                  />
                   <span>
                     <i class="fa fa-eye" id="eye2" aria-hidden="true"></i>
                   </span>
@@ -354,7 +412,9 @@
 
               <div class="btnBox">
                 <button type="button" class="goBack" id="back4">Go back</button>
-                <button type="button" class="continue" id="continue4">submit</button>
+                <button type="button" class="continue" id="continue4">
+                  submit
+                </button>
               </div>
             </div>
           </form>
@@ -368,7 +428,9 @@
           <div class="completeLogo">
             <img src="images/complete.svg" alt="complete" />
           </div>
-          <button type="button" class="backToEzone" id="back5">back to ezone</button>
+          <button type="button" class="backToEzone" id="back5">
+            back to ezone
+          </button>
         </div>
       </section>
     </div>

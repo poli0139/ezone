@@ -10,7 +10,18 @@ const fourthStep = document.querySelector(".fourthStep");
 const confirmation = document.querySelector(".confirmationDiv");
 const formSection = document.querySelector(".formSteps");
 
-var firstName = document.querySelector("form[name='info'] input[name='firstName']");
+const firstName = document.querySelector(
+  "form[name='info'] input[name='firstName']"
+);
+const toImproveCheckbox = document.querySelectorAll(
+  "form[name='firstStep'] input[name='toImprove']"
+);
+const gameTypeCheckbox = document.querySelectorAll(
+  "form[name='secondStep'] input[name='gameType']"
+);
+const gameCheckbox = document.querySelectorAll(
+  "form[name='thirdStep'] input[name='game']"
+);
 
 const join = document.querySelector("#join");
 const back1 = document.querySelector("#back1");
@@ -28,9 +39,11 @@ join.onclick = function () {
   let result = checkIfValid(firstName);
   // console.log(result);
   if (result == true) {
-    document.querySelector("form[name='info']").addEventListener("submit", function (e) {
-      e.preventDefault();
-    });
+    document
+      .querySelector("form[name='info']")
+      .addEventListener("submit", function (e) {
+        e.preventDefault();
+      });
     intro.style.left = "-65rem";
     firstStep.style.left = "2.8rem";
     formSection.classList.remove("themeGreen");
@@ -38,7 +51,7 @@ join.onclick = function () {
     formSection.classList.add("themeBlue");
     stepsNumbers.style.left = "13rem";
   } else {
-    console.log(result);
+    document.querySelector("form[name='info'] p").classList.remove("hidden");
   }
 };
 
@@ -53,25 +66,31 @@ back1.onclick = function () {
 };
 
 continue1.onclick = function () {
-  firstStep.style.left = "-65rem";
-  secondStep.style.left = "2.8rem";
-  formSection.classList.remove("themeBlue");
-  formSection.classList.remove("themeOrange");
-  formSection.classList.add("themeGreen");
-
-  //COLOR CHANGES
-  stepsNumbers.style.color = "#DFFCDF";
-  document.querySelectorAll(".number").forEach((e) => {
-    e.style.borderColor = "#DFFCDF";
-  });
-  document.querySelector(".stepOne").style.backgroundColor = "#DFFCDF";
-  document.querySelector(".stepTwo").style.backgroundColor = "#DFFCDF";
-  document.querySelector(".stepTwo").style.color = "#2b2e4b";
-  document.querySelector(".stepThree").style.color = "#DFFCDF";
-  document.querySelector(".stepFour").style.color = "#DFFCDF";
-  document.querySelectorAll(".numberLine").forEach((e) => {
-    e.style.backgroundColor = "#DFFCDF";
-  });
+  getCheckboxCount();
+  if (getCheckboxCount() == 0) {
+    document
+      .querySelector("form[name=firstStep] .err-message")
+      .classList.remove("hidden");
+  } else {
+    firstStep.style.left = "-65rem";
+    secondStep.style.left = "2.8rem";
+    formSection.classList.remove("themeBlue");
+    formSection.classList.remove("themeOrange");
+    formSection.classList.add("themeGreen");
+    //COLOR CHANGES
+    stepsNumbers.style.color = "#DFFCDF";
+    document.querySelectorAll(".number").forEach((e) => {
+      e.style.borderColor = "#DFFCDF";
+    });
+    document.querySelector(".stepOne").style.backgroundColor = "#DFFCDF";
+    document.querySelector(".stepTwo").style.backgroundColor = "#DFFCDF";
+    document.querySelector(".stepTwo").style.color = "#2b2e4b";
+    document.querySelector(".stepThree").style.color = "#DFFCDF";
+    document.querySelector(".stepFour").style.color = "#DFFCDF";
+    document.querySelectorAll(".numberLine").forEach((e) => {
+      e.style.backgroundColor = "#DFFCDF";
+    });
+  }
 };
 
 //STEP 2
@@ -98,25 +117,31 @@ back2.onclick = function () {
 };
 
 continue2.onclick = function () {
-  secondStep.style.left = "-65rem";
-  thirdStep.style.left = "2.8rem";
-  formSection.classList.remove("themeGreen");
-  formSection.classList.remove("themeBlue");
-  formSection.classList.add("themeOrange");
-
-  //COLOR CHANGES
-  stepsNumbers.style.color = "#ffb591";
-  document.querySelectorAll(".number").forEach((e) => {
-    e.style.borderColor = "#ffb591";
-  });
-  document.querySelector(".stepOne").style.backgroundColor = "#ffb591";
-  document.querySelector(".stepTwo").style.backgroundColor = "#ffb591";
-  document.querySelector(".stepThree").style.backgroundColor = "#ffb591";
-  document.querySelector(".stepThree").style.color = "#2b2e4b";
-  document.querySelector(".stepFour").style.color = "#ffb591";
-  document.querySelectorAll(".numberLine").forEach((e) => {
-    e.style.backgroundColor = "#ffb591";
-  });
+  getCheckboxCount();
+  if (getCheckboxCount() == 0) {
+    document
+      .querySelector("form[name=secondStep] .err-message")
+      .classList.remove("hidden");
+  } else {
+    secondStep.style.left = "-65rem";
+    thirdStep.style.left = "2.8rem";
+    formSection.classList.remove("themeGreen");
+    formSection.classList.remove("themeBlue");
+    formSection.classList.add("themeOrange");
+    //COLOR CHANGES
+    stepsNumbers.style.color = "#ffb591";
+    document.querySelectorAll(".number").forEach((e) => {
+      e.style.borderColor = "#ffb591";
+    });
+    document.querySelector(".stepOne").style.backgroundColor = "#ffb591";
+    document.querySelector(".stepTwo").style.backgroundColor = "#ffb591";
+    document.querySelector(".stepThree").style.backgroundColor = "#ffb591";
+    document.querySelector(".stepThree").style.color = "#2b2e4b";
+    document.querySelector(".stepFour").style.color = "#ffb591";
+    document.querySelectorAll(".numberLine").forEach((e) => {
+      e.style.backgroundColor = "#ffb591";
+    });
+  }
 };
 
 //STEP 3
@@ -145,25 +170,31 @@ back3.onclick = function () {
 };
 
 continue3.onclick = function () {
-  thirdStep.style.left = "-65rem";
-  fourthStep.style.left = "2.8rem";
-  formSection.classList.remove("themeGreen");
-  formSection.classList.remove("themeOrange");
-  formSection.classList.add("themeBlue");
-
-  //COLOR CHANGES
-  stepsNumbers.style.color = "#cacefc";
-  document.querySelectorAll(".number").forEach((e) => {
-    e.style.borderColor = "#cacefc";
-  });
-  document.querySelector(".stepOne").style.backgroundColor = "#cacefc";
-  document.querySelector(".stepTwo").style.backgroundColor = "#cacefc";
-  document.querySelector(".stepThree").style.backgroundColor = "#cacefc";
-  document.querySelector(".stepFour").style.backgroundColor = "#cacefc";
-  document.querySelector(".stepFour").style.color = "#2b2e4b";
-  document.querySelectorAll(".numberLine").forEach((e) => {
-    e.style.backgroundColor = "#cacefc";
-  });
+  getCheckboxCount();
+  if (getCheckboxCount() == 0) {
+    document
+      .querySelector("form[name=thirdStep] .err-message")
+      .classList.remove("hidden");
+  } else {
+    thirdStep.style.left = "-65rem";
+    fourthStep.style.left = "2.8rem";
+    formSection.classList.remove("themeGreen");
+    formSection.classList.remove("themeOrange");
+    formSection.classList.add("themeBlue");
+    //COLOR CHANGES
+    stepsNumbers.style.color = "#cacefc";
+    document.querySelectorAll(".number").forEach((e) => {
+      e.style.borderColor = "#cacefc";
+    });
+    document.querySelector(".stepOne").style.backgroundColor = "#cacefc";
+    document.querySelector(".stepTwo").style.backgroundColor = "#cacefc";
+    document.querySelector(".stepThree").style.backgroundColor = "#cacefc";
+    document.querySelector(".stepFour").style.backgroundColor = "#cacefc";
+    document.querySelector(".stepFour").style.color = "#2b2e4b";
+    document.querySelectorAll(".numberLine").forEach((e) => {
+      e.style.backgroundColor = "#cacefc";
+    });
+  }
 };
 
 //STEP 4
@@ -258,6 +289,46 @@ function togglePW2() {
   }
 }
 
+//VALIDATION FUNCTIONS
+
 function checkIfValid(input) {
   return input.checkValidity();
+}
+toImproveCheckbox.forEach((e) => {
+  e.addEventListener("click", checkboxCounter);
+});
+gameTypeCheckbox.forEach((e) => {
+  e.addEventListener("click", checkboxCounter);
+});
+gameCheckbox.forEach((e) => {
+  e.addEventListener("click", checkboxCounter);
+});
+
+function checkboxCounter(e) {
+  document.querySelectorAll(".err-message").forEach((e) => {
+    e.classList.add("hidden");
+  });
+  let currentlySelected = document.querySelectorAll(
+    `input[name=${e.target.name}]:checked`
+  ).length;
+  console.log(currentlySelected);
+  if (currentlySelected == 3) {
+    console.log("too many");
+    document
+      .querySelectorAll(`input[name=${e.target.name}]:not(:checked)`)
+      .forEach((e) => {
+        e.setAttribute("disabled", true);
+      });
+  } else if (currentlySelected != 3) {
+    console.log("else");
+    document
+      .querySelectorAll(`input[name=${e.target.name}]:not(:checked)`)
+      .forEach((e) => {
+        e.removeAttribute("disabled");
+      });
+  }
+}
+
+function getCheckboxCount() {
+  return document.querySelectorAll("input[name=toImprove]:checked").length;
 }

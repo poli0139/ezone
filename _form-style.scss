@@ -354,12 +354,12 @@
     background: none;
     border: none;
     border-bottom: solid variables.$orangeLight 2px;
-    font-family: variables.$uniformBlack;
+    font-family: variables.$uniformMedium;
     font-size: variables.$placeholder-size;
     text-transform: uppercase;
     letter-spacing: 3px;
     height: 2rem;
-    color: variables.$bluePastel;
+    color: white;
   }
 
   input[type="password"] {
