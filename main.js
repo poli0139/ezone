@@ -66,8 +66,8 @@ back1.onclick = function () {
 };
 
 continue1.onclick = function () {
-  getCheckboxCount();
-  if (getCheckboxCount() == 0) {
+  getCheckboxCountToImprove();
+  if (getCheckboxCountToImprove() == 0) {
     document
       .querySelector("form[name=firstStep] .err-message")
       .classList.remove("hidden");
@@ -117,8 +117,8 @@ back2.onclick = function () {
 };
 
 continue2.onclick = function () {
-  getCheckboxCount();
-  if (getCheckboxCount() == 0) {
+  getCheckboxCountGameType();
+  if (getCheckboxCountGameType() == 0) {
     document
       .querySelector("form[name=secondStep] .err-message")
       .classList.remove("hidden");
@@ -170,8 +170,8 @@ back3.onclick = function () {
 };
 
 continue3.onclick = function () {
-  getCheckboxCount();
-  if (getCheckboxCount() == 0) {
+  getCheckboxCountGame();
+  if (getCheckboxCountGame() == 0) {
     document
       .querySelector("form[name=thirdStep] .err-message")
       .classList.remove("hidden");
@@ -294,6 +294,12 @@ function togglePW2() {
 function checkIfValid(input) {
   return input.checkValidity();
 }
+
+//HIDE ERROR MESSAGE
+firstName.addEventListener("input", function () {
+  document.querySelector(".err-message").classList.add("hidden");
+});
+
 toImproveCheckbox.forEach((e) => {
   e.addEventListener("click", checkboxCounter);
 });
@@ -329,6 +335,12 @@ function checkboxCounter(e) {
   }
 }
 
-function getCheckboxCount() {
+function getCheckboxCountToImprove() {
   return document.querySelectorAll("input[name=toImprove]:checked").length;
+}
+function getCheckboxCountGameType() {
+  return document.querySelectorAll("input[name=gameType]:checked").length;
+}
+function getCheckboxCountGame() {
+  return document.querySelectorAll("input[name=game]:checked").length;
 }
