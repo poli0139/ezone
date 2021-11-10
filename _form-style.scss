@@ -121,7 +121,7 @@
 
     .closeButtonDiv {
       align-self: flex-start;
-      margin-top: -4rem;
+      margin-top: -1rem;
       margin-left: -2rem;
       width: 18rem;
     }
@@ -511,4 +511,142 @@ button.closeModal:hover,
 button.goBack:hover {
   color: variables.$orangeLight;
   transition: 0.2s ease-in-out;
+}
+
+@media only screen and (max-width: 600px) {
+  //MODAL STYLING
+  .modal {
+    background-color: variables.$modalBG;
+    width: 70vw;
+    height: 85vh;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    border-radius: 20px;
+    position: relative;
+
+    //FONT STYLES
+    h1 {
+      letter-spacing: 0.5rem;
+      text-transform: uppercase;
+      font-size: 1.5rem;
+
+      .outlineText {
+        color: transparent;
+        -webkit-text-stroke: 1px variables.$orangeLight;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    h2 {
+      font-family: variables.$uniformBlack;
+      font-size: variables.$h2-size;
+      text-transform: uppercase;
+      letter-spacing: 0.3rem;
+    }
+
+    h3 {
+      font-family: variables.$uniformMedium;
+      font-size: variables.$h3-size;
+      text-transform: uppercase;
+      line-height: 1.5;
+      letter-spacing: 0.1rem;
+      font-weight: lighter;
+    }
+
+    h4 {
+      font-family: variables.$uniformMedium;
+      font-size: variables.$h4-size;
+      text-transform: uppercase;
+      line-height: 1.5;
+      letter-spacing: 0.1rem;
+      font-weight: 100;
+    }
+
+    h5 {
+      font-family: variables.$uniformMedium;
+      font-size: variables.$h5-size;
+      text-transform: uppercase;
+      line-height: 1.5;
+      letter-spacing: 0.1rem;
+      font-weight: lighter;
+    }
+
+    p {
+      line-height: 1.5;
+      font-family: variables.$uniformMedium;
+      font-size: variables.$p-size;
+    }
+
+    .orangeSpan {
+      color: variables.$orangeLight;
+    }
+    .greenSpan {
+      color: variables.$greenLight;
+    }
+  }
+  .modalSection {
+    border: solid variables.$orangeLight 1px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  //FORM STEPS
+  .formSteps {
+    position: relative;
+    width: 70vw;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    transition: all 1s;
+
+    .introSec {
+      left: 1.1rem;
+
+      width: 90%;
+      margin: 0;
+      position: absolute;
+      transition: 0.8s;
+
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      justify-content: center;
+      align-content: center;
+      padding-top: 2rem;
+
+      p {
+        width: 90%;
+        margin: auto;
+      }
+
+      form {
+        width: 90%;
+        margin: auto;
+      }
+
+      .closeButtonDiv {
+        align-self: flex-start;
+        margin-top: -3rem;
+        margin-left: 1.2rem;
+        width: 100%;
+      }
+    }
+
+    .stepsForms {
+      width: 90%;
+      margin: 0;
+      margin-top: 1rem;
+      position: absolute;
+      transition: 0.8s;
+    }
+
+    .firstStep {
+      left: 65rem;
+      margin-top: 5.5rem;
+    }
+  }
 }

@@ -290,7 +290,6 @@ function togglePW2() {
 }
 
 //VALIDATION FUNCTIONS
-
 function checkIfValid(input) {
   return input.checkValidity();
 }

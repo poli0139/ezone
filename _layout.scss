@@ -24,3 +24,20 @@ body {
 .hidden {
   display: none;
 }
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-image: url(assets/background.png);
+    background-size: contain;
+  }
+
+  #darkBox {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    position: absolute;
+    background-color: black;
+    opacity: 0.4;
+    z-index: -1;
+  }
+}
