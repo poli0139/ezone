@@ -137,26 +137,43 @@
 
   .firstStep {
     left: 65rem;
-    margin-top: 4rem;
+    margin-top: 5.5rem;
   }
 
   .secondStep {
     left: 65rem;
+    margin-top: 7rem;
+
+    h5 {
+      padding-bottom: 1.2rem;
+    }
+    button {
+      margin-top: 3rem;
+    }
   }
 
   .thirdStep {
     left: 65rem;
+    margin-top: 5.5rem;
+
+    button {
+      margin-top: 1rem;
+    }
   }
 
   .thirdStep div.checkboxes {
-    margin-top: 2rem;
+    margin-top: 0.5rem;
   }
 
   .fourthStep {
     left: 65rem;
+    margin-top: 6rem;
 
     h2 {
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
+    }
+    button {
+      margin-top: 1.5rem;
     }
 
     .fourthStepInputs {
@@ -178,8 +195,8 @@
       .password1 {
         span {
           position: absolute;
-          right: 28.5rem;
-          top: 20rem;
+          right: 27rem;
+          top: 17.4rem;
           cursor: pointer;
 
           .fa {
@@ -192,8 +209,8 @@
       .password2 {
         span {
           position: absolute;
-          right: 7.5rem;
-          top: 20rem;
+          right: 6.5rem;
+          top: 17.4rem;
           cursor: pointer;
 
           .fa {
@@ -214,10 +231,6 @@
       height: 2rem;
       color: variables.$bluePastel;
     }
-
-    .btnBox {
-      margin-top: -2rem;
-    }
   }
 
   .confirmationDiv {
@@ -225,6 +238,7 @@
 
     width: 90%;
     margin: 0;
+    margin-top: 1rem;
     position: absolute;
     transition: 0.8s;
 
@@ -238,6 +252,9 @@
       letter-spacing: 0.8rem;
       line-height: 4rem;
     }
+    button {
+      margin-top: 3rem;
+    }
     .completeLogo {
       height: 13rem;
       width: 13rem;
@@ -250,18 +267,18 @@
   }
 
   .stepRow {
-    left: 65rem;
+    left: 90rem;
 
-    width: 60%;
+    width: 50%;
     margin: 0;
-    margin-top: 1.5rem;
+    margin-top: 1.2rem;
     position: absolute;
     transition: 0.8s;
 
     display: flex;
     justify-content: center;
     gap: 1rem;
-    align-content: center;
+    line-height: 3.2rem;
     align-items: center;
     font-family: variables.$uniformBlack;
     color: variables.$bluePastel;
@@ -349,8 +366,20 @@
     transition: all 0.3s;
   }
 
-  input[type="text"],
+  #lastNameDiv input[type="text"],
   input[type="email"] {
+    background: none;
+    border: none;
+    border-bottom: solid variables.$bluePastel 2px;
+    font-family: variables.$uniformMedium;
+    font-size: variables.$placeholder-size;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    height: 2rem;
+    color: white;
+  }
+
+  input[type="text"] {
     background: none;
     border: none;
     border-bottom: solid variables.$orangeLight 2px;
@@ -365,7 +394,7 @@
   input[type="password"] {
     background: none;
     border: none;
-    border-bottom: solid variables.$orangeLight 2px;
+    border-bottom: solid variables.$bluePastel 2px;
     font-family: variables.$uniformBlack;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -417,7 +446,8 @@ button.goBack {
   font-weight: lighter;
   text-transform: uppercase;
   letter-spacing: 3px;
-  padding: 1rem 2rem;
+  padding: 1rem 3rem;
+  padding-left: 0.5rem;
   line-height: 1rem;
 }
 
@@ -436,7 +466,6 @@ button.goBack {
   text-transform: uppercase;
   letter-spacing: 3px;
   padding: 1rem 2rem;
-  margin-top: 2rem;
 }
 
 .continue {
@@ -451,7 +480,6 @@ button.goBack {
   text-transform: uppercase;
   letter-spacing: 3px;
   padding: 1rem 2rem;
-  margin-top: 2rem;
 }
 
 .backToEzone {
