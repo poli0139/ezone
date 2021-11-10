@@ -3,7 +3,8 @@
 //TYPE TEXT
 
 input[type="text"]:focus,
-input[type="email"]:focus {
+input[type="email"]:focus,
+input[type="password"]:focus {
   outline: none;
   caret-color: white;
 }
