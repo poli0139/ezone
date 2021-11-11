@@ -350,7 +350,7 @@
             </div>
           </form>
 
-          <form action="" class="stepsForms fourthStep">
+          <form name="generalInfo" action="" class="stepsForms fourthStep">
             <h2>Lastly, <br />tell us the boring stuff</h2>
 
             <div class="fourthStepInputs">
@@ -364,6 +364,7 @@
                   placeholder="Last name"
                   required
                 />
+                <p class="err-message hidden">Please, enter your last name</p>
               </div>
 
               <div id="emailDiv" class="inputDiv">
@@ -372,8 +373,11 @@
                   type="email"
                   id="email"
                   name="email"
-                  placeholder="email"
+                  placeholder="email@email.com"
                 />
+                <p class="err-message hidden">
+                  looks like your email is not valid
+                </p>
               </div>
 
               <div id="passwordDiv" class="inputDiv">
@@ -386,11 +390,13 @@
                     id="password"
                     name="password"
                     placeholder="password"
+                    minlength="8"
                     required
                   />
                   <span>
                     <i class="fa fa-eye" id="eye" aria-hidden="true"></i>
                   </span>
+                  <p class="password-message">Must be at least 8 characters</p>
                 </div>
 
                 <div class="password2">
@@ -428,7 +434,7 @@
           <div class="completeLogo">
             <img src="images/complete.svg" alt="complete" />
           </div>
-          <button type="button" class="closeModal" id="back5">
+          <button type="button" class="closeModal backToEzone" id="back5">
             back to ezone
           </button>
         </div>

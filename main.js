@@ -22,6 +22,15 @@ const gameTypeCheckbox = document.querySelectorAll(
 const gameCheckbox = document.querySelectorAll(
   "form[name='thirdStep'] input[name='game']"
 );
+const password = document.querySelector(
+  'form[name="generalInfo"] input[name="password"]'
+);
+const lastName = document.querySelector(
+  "form[name='generalInfo'] input[name='lastName']"
+);
+const email = document.querySelector(
+  "form[name='generalInfo'] input[name='email']"
+);
 
 const closeModal = document.querySelector(".closeModal");
 const join = document.querySelector("#join");
@@ -231,12 +240,23 @@ back4.onclick = function () {
 };
 
 continue4.onclick = function () {
-  fourthStep.style.left = "-65rem";
-  stepsNumbers.style.left = "-65rem";
-  confirmation.style.left = "0.1rem";
-  formSection.classList.remove("themeGreen");
-  formSection.classList.remove("themeBlue");
-  formSection.classList.add("themeOrange");
+  let passwordResult = checkIfValid(password);
+  let lastNameResult = checkIfValid(lastName);
+  let emailResult = checkIfValid(email);
+  if (passwordResult == true && lastNameResult == true && emailResult == true) {
+    fourthStep.style.left = "-65rem";
+    stepsNumbers.style.left = "-65rem";
+    confirmation.style.left = "0.1rem";
+    formSection.classList.remove("themeGreen");
+    formSection.classList.remove("themeBlue");
+    formSection.classList.add("themeOrange");
+  } else if (passwordResult == false) {
+    document.querySelector(".password-message").classList.add("animate");
+  } else if (lastNameResult == false) {
+    document.querySelector("#lastNameDiv p").classList.remove("hidden");
+  } else if (emailResult == false) {
+    document.querySelector("#emailDiv p").classList.remove("hidden");
+  }
 };
 
 //CONFIRMATION
@@ -306,6 +326,12 @@ function checkIfValid(input) {
 //HIDE ERROR MESSAGE
 firstName.addEventListener("input", function () {
   document.querySelector(".err-message").classList.add("hidden");
+});
+lastName.addEventListener("input", function () {
+  document.querySelector("#lastNameDiv p").classList.add("hidden");
+});
+email.addEventListener("input", function () {
+  document.querySelector("#emailDiv p").classList.add("hidden");
 });
 
 toImproveCheckbox.forEach((e) => {

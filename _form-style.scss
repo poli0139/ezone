@@ -213,6 +213,17 @@
       flex-direction: row;
       gap: 4rem;
 
+      .password-message {
+        font-size: 0.7rem;
+        letter-spacing: normal;
+        font-family: variables.$uniformMedium;
+        font-weight: 100;
+      }
+      .animate {
+        animation: animateMessage 0.5s;
+        animation-iteration-count: 6;
+        animation-direction: alternate;
+      }
       .password1 {
         span {
           position: absolute;
@@ -245,7 +256,6 @@
       background: none;
       border: none;
       border-bottom: solid variables.$orangeLight 2px;
-      font-family: variables.$uniformBlack;
       text-transform: uppercase;
       letter-spacing: 3px;
       width: 85%;
@@ -417,7 +427,8 @@
     background: none;
     border: none;
     border-bottom: solid variables.$bluePastel 2px;
-    font-family: variables.$uniformBlack;
+    font-family: variables.$uniformMedium;
+    font-size: variables.$placeholder-size;
     text-transform: uppercase;
     letter-spacing: 3px;
     width: 100%;
@@ -534,6 +545,15 @@ button.closeModal:hover,
 button.goBack:hover {
   color: variables.$orangeLight;
   transition: 0.2s ease-in-out;
+}
+
+@keyframes animateMessage {
+  from {
+    letter-spacing: normal;
+  }
+  to {
+    letter-spacing: 1px;
+  }
 }
 
 @media only screen and (max-width: 1300px) {
