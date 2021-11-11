@@ -10,18 +10,10 @@ const fourthStep = document.querySelector(".fourthStep");
 const confirmation = document.querySelector(".confirmationDiv");
 const formSection = document.querySelector(".formSteps");
 
-const firstName = document.querySelector(
-  "form[name='info'] input[name='firstName']"
-);
-const toImproveCheckbox = document.querySelectorAll(
-  "form[name='firstStep'] input[name='toImprove']"
-);
-const gameTypeCheckbox = document.querySelectorAll(
-  "form[name='secondStep'] input[name='gameType']"
-);
-const gameCheckbox = document.querySelectorAll(
-  "form[name='thirdStep'] input[name='game']"
-);
+const firstName = document.querySelector("form[name='info'] input[name='firstName']");
+const toImproveCheckbox = document.querySelectorAll("form[name='firstStep'] input[name='toImprove']");
+const gameTypeCheckbox = document.querySelectorAll("form[name='secondStep'] input[name='gameType']");
+const gameCheckbox = document.querySelectorAll("form[name='thirdStep'] input[name='game']");
 
 const join = document.querySelector("#join");
 const back1 = document.querySelector("#back1");
@@ -39,17 +31,15 @@ join.onclick = function () {
   let result = checkIfValid(firstName);
   // console.log(result);
   if (result == true) {
-    document
-      .querySelector("form[name='info']")
-      .addEventListener("submit", function (e) {
-        e.preventDefault();
-      });
+    document.querySelector("form[name='info']").addEventListener("submit", function (e) {
+      e.preventDefault();
+    });
     intro.style.left = "-65rem";
-    firstStep.style.left = "2.8rem";
+    firstStep.style.left = "0.1rem";
     formSection.classList.remove("themeGreen");
     formSection.classList.remove("themeOrange");
     formSection.classList.add("themeBlue");
-    stepsNumbers.style.left = "13rem";
+    stepsNumbers.style.left = "0.1rem";
   } else {
     document.querySelector("form[name='info'] p").classList.remove("hidden");
   }
@@ -57,7 +47,7 @@ join.onclick = function () {
 
 //STEP 1
 back1.onclick = function () {
-  intro.style.left = "2.8rem";
+  intro.style.left = "0.1rem";
   firstStep.style.left = "65rem";
   formSection.classList.remove("themeGreen");
   formSection.classList.remove("themeOrange");
@@ -68,12 +58,10 @@ back1.onclick = function () {
 continue1.onclick = function () {
   getCheckboxCountToImprove();
   if (getCheckboxCountToImprove() == 0) {
-    document
-      .querySelector("form[name=firstStep] .err-message")
-      .classList.remove("hidden");
+    document.querySelector("form[name=firstStep] .err-message").classList.remove("hidden");
   } else {
     firstStep.style.left = "-65rem";
-    secondStep.style.left = "2.8rem";
+    secondStep.style.left = "0.1rem";
     formSection.classList.remove("themeBlue");
     formSection.classList.remove("themeOrange");
     formSection.classList.add("themeGreen");
@@ -95,7 +83,7 @@ continue1.onclick = function () {
 
 //STEP 2
 back2.onclick = function () {
-  firstStep.style.left = "2.8rem";
+  firstStep.style.left = "0.1rem";
   secondStep.style.left = "65rem";
   formSection.classList.remove("themeGreen");
   formSection.classList.remove("themeOrange");
@@ -119,12 +107,10 @@ back2.onclick = function () {
 continue2.onclick = function () {
   getCheckboxCountGameType();
   if (getCheckboxCountGameType() == 0) {
-    document
-      .querySelector("form[name=secondStep] .err-message")
-      .classList.remove("hidden");
+    document.querySelector("form[name=secondStep] .err-message").classList.remove("hidden");
   } else {
     secondStep.style.left = "-65rem";
-    thirdStep.style.left = "2.8rem";
+    thirdStep.style.left = "0.1rem";
     formSection.classList.remove("themeGreen");
     formSection.classList.remove("themeBlue");
     formSection.classList.add("themeOrange");
@@ -146,7 +132,7 @@ continue2.onclick = function () {
 
 //STEP 3
 back3.onclick = function () {
-  secondStep.style.left = "2.8rem";
+  secondStep.style.left = "0.1rem";
   thirdStep.style.left = "65rem";
   formSection.classList.remove("themeBlue");
   formSection.classList.remove("themeOrange");
@@ -172,12 +158,10 @@ back3.onclick = function () {
 continue3.onclick = function () {
   getCheckboxCountGame();
   if (getCheckboxCountGame() == 0) {
-    document
-      .querySelector("form[name=thirdStep] .err-message")
-      .classList.remove("hidden");
+    document.querySelector("form[name=thirdStep] .err-message").classList.remove("hidden");
   } else {
     thirdStep.style.left = "-65rem";
-    fourthStep.style.left = "2.8rem";
+    fourthStep.style.left = "0.1rem";
     formSection.classList.remove("themeGreen");
     formSection.classList.remove("themeOrange");
     formSection.classList.add("themeBlue");
@@ -199,7 +183,7 @@ continue3.onclick = function () {
 
 //STEP 4
 back4.onclick = function () {
-  thirdStep.style.left = "2.8rem";
+  thirdStep.style.left = "0.1rem";
   fourthStep.style.left = "65rem";
   formSection.classList.remove("themeGreen");
   formSection.classList.remove("themeBlue");
@@ -224,7 +208,7 @@ back4.onclick = function () {
 continue4.onclick = function () {
   fourthStep.style.left = "-65rem";
   stepsNumbers.style.left = "-65rem";
-  confirmation.style.left = "2.8rem";
+  confirmation.style.left = "0.1rem";
   formSection.classList.remove("themeGreen");
   formSection.classList.remove("themeBlue");
   formSection.classList.add("themeOrange");
@@ -232,7 +216,7 @@ continue4.onclick = function () {
 
 //CONFIRMATION
 back5.onclick = function () {
-  intro.style.left = "2.8rem";
+  intro.style.left = "0.1rem";
   stepsNumbers.style.left = "65rem";
   firstStep.style.left = "65rem";
   confirmation.style.left = "65rem";
@@ -313,24 +297,18 @@ function checkboxCounter(e) {
   document.querySelectorAll(".err-message").forEach((e) => {
     e.classList.add("hidden");
   });
-  let currentlySelected = document.querySelectorAll(
-    `input[name=${e.target.name}]:checked`
-  ).length;
+  let currentlySelected = document.querySelectorAll(`input[name=${e.target.name}]:checked`).length;
   console.log(currentlySelected);
   if (currentlySelected == 3) {
     console.log("too many");
-    document
-      .querySelectorAll(`input[name=${e.target.name}]:not(:checked)`)
-      .forEach((e) => {
-        e.setAttribute("disabled", true);
-      });
+    document.querySelectorAll(`input[name=${e.target.name}]:not(:checked)`).forEach((e) => {
+      e.setAttribute("disabled", true);
+    });
   } else if (currentlySelected != 3) {
     console.log("else");
-    document
-      .querySelectorAll(`input[name=${e.target.name}]:not(:checked)`)
-      .forEach((e) => {
-        e.removeAttribute("disabled");
-      });
+    document.querySelectorAll(`input[name=${e.target.name}]:not(:checked)`).forEach((e) => {
+      e.removeAttribute("disabled");
+    });
   }
 }
 
