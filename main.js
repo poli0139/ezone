@@ -24,6 +24,7 @@ const gameCheckbox = document.querySelectorAll(
 );
 
 const closeModal = document.querySelector(".closeModal");
+const openModal = document.querySelector(".joinBtn");
 const join = document.querySelector("#join");
 const back1 = document.querySelector("#back1");
 const continue1 = document.querySelector("#continue1");
@@ -36,12 +37,19 @@ const continue4 = document.querySelector("#continue4");
 const back5 = document.querySelector("#back5");
 
 //close modal
-{
-  closeModal.onclick = function () {
-    document.querySelector(".modal").classList.add("hidden");
-    document.querySelector("#darkBox").classList.add("hidden");
-  };
-}
+closeModal.onclick = function () {
+  document.querySelector(".modal").classList.add("hidden");
+  document.querySelector("#darkBox").classList.add("hidden");
+  openModal.classList.remove("hidden");
+};
+
+//open modal
+openModal.onclick = function () {
+  console.log("openmodal");
+  openModal.classList.add("hidden");
+  document.querySelector(".modal").classList.remove("hidden");
+  document.querySelector("#darkBox").classList.remove("hidden");
+};
 
 //INTRO
 join.onclick = function () {
