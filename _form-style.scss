@@ -738,4 +738,24 @@ button.goBack:hover {
   .btnBox {
     gap: 3rem;
   }
+  .joinBtn {
+    position: absolute;
+    top: 23vh;
+    left: 26vw;
+    font-family: variables.$uniformBlack;
+    background: none;
+    color: white;
+    border: solid variables.$orangeLight 3px;
+    border-radius: 80px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 1rem 1rem;
+    font-size: 0.3rem;
+  }
+
+  .joinBtn:hover {
+    background-color: variables.$orangeLight;
+    color: variables.$modalBG;
+    transition: 0.2s ease-in-out;
+  }
 }
