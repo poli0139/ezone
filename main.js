@@ -10,11 +10,20 @@ const fourthStep = document.querySelector(".fourthStep");
 const confirmation = document.querySelector(".confirmationDiv");
 const formSection = document.querySelector(".formSteps");
 
-const firstName = document.querySelector("form[name='info'] input[name='firstName']");
-const toImproveCheckbox = document.querySelectorAll("form[name='firstStep'] input[name='toImprove']");
-const gameTypeCheckbox = document.querySelectorAll("form[name='secondStep'] input[name='gameType']");
-const gameCheckbox = document.querySelectorAll("form[name='thirdStep'] input[name='game']");
+const firstName = document.querySelector(
+  "form[name='info'] input[name='firstName']"
+);
+const toImproveCheckbox = document.querySelectorAll(
+  "form[name='firstStep'] input[name='toImprove']"
+);
+const gameTypeCheckbox = document.querySelectorAll(
+  "form[name='secondStep'] input[name='gameType']"
+);
+const gameCheckbox = document.querySelectorAll(
+  "form[name='thirdStep'] input[name='game']"
+);
 
+const closeModal = document.querySelector(".closeModal");
 const join = document.querySelector("#join");
 const back1 = document.querySelector("#back1");
 const continue1 = document.querySelector("#continue1");
@@ -26,14 +35,24 @@ const back4 = document.querySelector("#back4");
 const continue4 = document.querySelector("#continue4");
 const back5 = document.querySelector("#back5");
 
+//close modal
+{
+  closeModal.onclick = function () {
+    document.querySelector(".modal").classList.add("hidden");
+    document.querySelector("#darkBox").classList.add("hidden");
+  };
+}
+
 //INTRO
 join.onclick = function () {
   let result = checkIfValid(firstName);
   // console.log(result);
   if (result == true) {
-    document.querySelector("form[name='info']").addEventListener("submit", function (e) {
-      e.preventDefault();
-    });
+    document
+      .querySelector("form[name='info']")
+      .addEventListener("submit", function (e) {
+        e.preventDefault();
+      });
     intro.style.left = "-65rem";
     firstStep.style.left = "0.1rem";
     formSection.classList.remove("themeGreen");
@@ -58,7 +77,9 @@ back1.onclick = function () {
 continue1.onclick = function () {
   getCheckboxCountToImprove();
   if (getCheckboxCountToImprove() == 0) {
-    document.querySelector("form[name=firstStep] .err-message").classList.remove("hidden");
+    document
+      .querySelector("form[name=firstStep] .err-message")
+      .classList.remove("hidden");
   } else {
     firstStep.style.left = "-65rem";
     secondStep.style.left = "0.1rem";
@@ -107,7 +128,9 @@ back2.onclick = function () {
 continue2.onclick = function () {
   getCheckboxCountGameType();
   if (getCheckboxCountGameType() == 0) {
-    document.querySelector("form[name=secondStep] .err-message").classList.remove("hidden");
+    document
+      .querySelector("form[name=secondStep] .err-message")
+      .classList.remove("hidden");
   } else {
     secondStep.style.left = "-65rem";
     thirdStep.style.left = "0.1rem";
@@ -158,7 +181,9 @@ back3.onclick = function () {
 continue3.onclick = function () {
   getCheckboxCountGame();
   if (getCheckboxCountGame() == 0) {
-    document.querySelector("form[name=thirdStep] .err-message").classList.remove("hidden");
+    document
+      .querySelector("form[name=thirdStep] .err-message")
+      .classList.remove("hidden");
   } else {
     thirdStep.style.left = "-65rem";
     fourthStep.style.left = "0.1rem";
@@ -297,18 +322,24 @@ function checkboxCounter(e) {
   document.querySelectorAll(".err-message").forEach((e) => {
     e.classList.add("hidden");
   });
-  let currentlySelected = document.querySelectorAll(`input[name=${e.target.name}]:checked`).length;
+  let currentlySelected = document.querySelectorAll(
+    `input[name=${e.target.name}]:checked`
+  ).length;
   console.log(currentlySelected);
   if (currentlySelected == 3) {
     console.log("too many");
-    document.querySelectorAll(`input[name=${e.target.name}]:not(:checked)`).forEach((e) => {
-      e.setAttribute("disabled", true);
-    });
+    document
+      .querySelectorAll(`input[name=${e.target.name}]:not(:checked)`)
+      .forEach((e) => {
+        e.setAttribute("disabled", true);
+      });
   } else if (currentlySelected != 3) {
     console.log("else");
-    document.querySelectorAll(`input[name=${e.target.name}]:not(:checked)`).forEach((e) => {
-      e.removeAttribute("disabled");
-    });
+    document
+      .querySelectorAll(`input[name=${e.target.name}]:not(:checked)`)
+      .forEach((e) => {
+        e.removeAttribute("disabled");
+      });
   }
 }
 
