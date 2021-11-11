@@ -537,7 +537,9 @@ button.goBack:hover {
 }
 
 .joinBtn {
-  margin: auto;
+  position: absolute;
+  top: 77vh;
+  left: 33vw;
   font-family: variables.$uniformBlack;
   background: none;
   color: white;
